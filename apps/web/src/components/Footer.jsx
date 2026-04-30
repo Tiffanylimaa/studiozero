@@ -45,7 +45,7 @@ function Footer() {
           <p>&copy; {new Date().getFullYear()} Studio Zero. Todos os direitos reservados.</p>
           <div className="flex items-center space-x-6">
             <Link to="/privacidade" className="hover:text-foreground transition-colors">
-              Privacidade
+              Termos e Privacidade
             </Link>
             <Link to="/admin" className="hover:text-primary transition-colors">
               Admin Login
