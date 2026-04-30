@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://studiozero.io/sitemap.xml

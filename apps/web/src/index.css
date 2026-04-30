@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Studio Zero Dark Theme */
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 43 14% 90%; /* #E8E6E1 */
+    
+    --card: 0 0% 7%; /* #111111 */
+    --card-foreground: 43 14% 90%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 43 14% 90%;
+    
+    --primary: 0 100% 50%; /* #FF0000 */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 218 71% 47%; /* #2260CC */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 54%; /* #8A8A8A */
+    
+    --accent: 0 0% 5%; /* #0D0D0D */
+    --accent-foreground: 43 14% 90%;
+    
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 10%; /* #1A1A1A */
+    --input: 0 0% 10%;
+    --ring: 0 100% 50%;
+    
+    --radius: 0rem; /* Rectangular borders */
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 43 14% 90%;
+    --card: 0 0% 7%;
+    --card-foreground: 43 14% 90%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 43 14% 90%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 218 71% 47%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 54%;
+    --accent: 0 0% 5%;
+    --accent-foreground: 43 14% 90%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 0 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: hsl(var(--background));
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+    line-height: 1;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.1;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .instrument-card {
+    @apply bg-[#111111] p-8 border-y border-r border-border border-l-[5px] transition-all duration-300 cursor-pointer hover:scale-[1.02] flex flex-col h-full;
+  }
+  .instrument-card-red {
+    @apply border-l-[#E8202A] hover:shadow-[0_0_30px_rgba(232,32,42,0.15)];
+  }
+  .instrument-card-blue {
+    @apply border-l-[#2260CC] hover:shadow-[0_0_30px_rgba(34,96,204,0.15)];
+  }
+  .instrument-title {
+    @apply font-syne font-bold text-white uppercase text-3xl mb-4 transition-colors;
+  }
+  .instrument-subtitle {
+    @apply font-archivo font-light text-[#8A8A8A] flex-grow;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-section-contrast {
+    background-color: hsl(var(--accent));
+  }
+}
+
+/* Custom Waveform Animation */
+@keyframes wave {
+  0%, 100% { height: 10px; }
+  50% { height: 50px; }
+}
+.wave-bar {
+  animation: wave 1.2s ease-in-out infinite;
+}
+.wave-bar:nth-child(1) { animation-delay: 0.0s; }
+.wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { animation-delay: 0.4s; }

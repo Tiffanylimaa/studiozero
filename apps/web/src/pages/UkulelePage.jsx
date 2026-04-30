@@ -1,0 +1,102 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+import Header from '@/components/Header.jsx';
+import Footer from '@/components/Footer.jsx';
+import InstrumentHero from '@/components/InstrumentHero.jsx';
+import { Button } from '@/components/ui/button';
+
+function UkulelePage() {
+  const products = [
+    {
+      title: "Packs de Repertório",
+      price: "R$ 20,00",
+      features: [
+        'PDFs Visuais e Práticos',
+        'Tablaturas',
+        'Parte Teórica Aplicada'
+      ]
+    },
+    {
+      title: "Bootcamp Zero ao Play",
+      price: "R$ 30,00",
+      features: [
+        'Cronograma de 30 dias: Planejamento diário focado em progresso real',
+        'PDFs exclusivos com tablaturas e teoria descomplicada',
+        'Seleção dos melhores vídeos com conteúdos práticos',
+        'Dicionário Visual de Acordes'
+      ]
+    },
+    {
+      title: "Pacote VIP",
+      price: "R$ 50,00",
+      features: [
+        'Experiência Premium',
+        'PDFs com tablaturas e teoria',
+        'Curadoria de vídeos educativos',
+        'Apresentações de slides educativas e dinâmicas para um estudo de alto nível',
+        'Guia de Equipamento com custo-benefício',
+        'Cronograma de 30 dias',
+        'Dicionário Visual de Acordes'
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
+      <Helmet>
+        <title>STUDIO ZERO | UKULELE</title>
+      </Helmet>
+
+      <Header />
+
+      <InstrumentHero 
+        instrumentName="UKULELE" 
+        description="Diversão e musicalidade. O caminho mais rápido e leve para começar a tocar suas primeiras músicas." 
+      />
+
+      <main className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {products.map((prod, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-[#111111] border border-border p-10 flex flex-col h-full hover:border-[#2260CC]/50 transition-colors group"
+              >
+                <h3 className="text-2xl font-syne font-bold text-white uppercase mb-8 group-hover:text-[#2260CC] transition-colors">
+                  {prod.title}
+                </h3>
+
+                <ul className="space-y-4 mb-12 flex-grow">
+                  {prod.features.map((feat, j) => (
+                    <li key={j} className="flex items-start text-sm text-foreground/80">
+                      <Check className="w-5 h-5 text-[#2260CC] mr-3 shrink-0" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto">
+                  <div className="text-4xl font-syne font-bold text-white mb-8">
+                    {prod.price}
+                  </div>
+                  <Button className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
+                    Comprar
+                  </Button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default UkulelePage;
