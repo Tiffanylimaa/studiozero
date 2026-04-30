@@ -10,7 +10,7 @@ function PrivacidadePage() {
         <title>Termos de Uso e Privacidade | Studio Zero</title>
         <meta
           name="description"
-          content="Termos de uso e política de privacidade do Studio Zero para produtos digitais de música."
+          content="Termos de uso e política de privacidade do Studio Zero para produtos digitais de música vendidos pela Kiwify."
         />
       </Helmet>
 
@@ -29,7 +29,7 @@ function PrivacidadePage() {
 
             <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl leading-relaxed">
               Esta página explica, de forma simples e direta, como funcionam o uso do site,
-              a compra dos produtos digitais e o tratamento de informações pessoais.
+              a compra dos produtos digitais pela Kiwify e o tratamento de informações pessoais.
             </p>
           </div>
         </section>
@@ -54,15 +54,20 @@ function PrivacidadePage() {
                 </p>
 
                 <p>
+                  As compras são realizadas em checkout externo da Kiwify. Ao clicar em um botão
+                  de compra, você será direcionado para o ambiente da plataforma, onde pagamento,
+                  confirmação do pedido e liberação de acesso podem ser processados.
+                </p>
+
+                <p>
                   Os produtos disponibilizados têm finalidade educacional. O resultado do uso dos
                   materiais pode variar de acordo com o tempo de prática, dedicação, experiência
                   prévia e forma de estudo de cada pessoa.
                 </p>
 
                 <p>
-                  Após a compra, o acesso ao produto será enviado conforme o método definido no
-                  momento da venda, como e-mail, plataforma de pagamento, área de membros ou outro
-                  canal informado.
+                  Após a compra, o acesso ao produto será enviado pela Kiwify para o e-mail usado
+                  no pedido ou disponibilizado conforme as instruções da página de venda.
                 </p>
 
                 <p>
@@ -91,14 +96,15 @@ function PrivacidadePage() {
                 </p>
 
                 <p>
-                  Podemos coletar dados como nome, e-mail, telefone, informações de pagamento e
-                  dados fornecidos voluntariamente em formulários, mensagens ou páginas de compra.
+                  Podemos coletar dados como nome, e-mail, telefone e dados fornecidos
+                  voluntariamente em formulários, mensagens ou páginas de compra. Dados de pagamento
+                  são tratados pela plataforma responsável pelo checkout.
                 </p>
 
                 <p>
-                  As informações de pagamento podem ser processadas por plataformas externas, como
-                  gateways de pagamento, plataformas de checkout ou sistemas de entrega digital.
-                  O Studio Zero não armazena dados completos de cartão de crédito.
+                  As informações de pagamento são processadas por plataformas externas, como a
+                  Kiwify, gateways de pagamento, plataformas de checkout ou sistemas de entrega
+                  digital. O Studio Zero não armazena dados completos de cartão de crédito.
                 </p>
 
                 <p>
@@ -114,8 +120,9 @@ function PrivacidadePage() {
                 </p>
 
                 <p>
-                  Você pode solicitar a atualização, correção ou exclusão dos seus dados entrando
-                  em contato pelo e-mail informado no rodapé do site.
+                  Você pode solicitar acesso, atualização, correção ou exclusão dos seus dados,
+                  conforme a legislação aplicável, entrando em contato pelo e-mail
+                  equipe@studiozero.io.
                 </p>
               </div>
             </div>
@@ -128,17 +135,17 @@ function PrivacidadePage() {
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
                 <p>
                   Os produtos digitais são entregues conforme as instruções da página de venda ou
-                  da plataforma utilizada no momento da compra.
+                  da Kiwify, plataforma utilizada para venda e entrega dos materiais.
                 </p>
 
                 <p>
                   Em caso de dificuldade de acesso, erro no recebimento ou dúvida sobre o material,
-                  entre em contato com a equipe do Studio Zero pelo e-mail disponível no site.
+                  entre em contato com a equipe do Studio Zero pelo e-mail equipe@studiozero.io.
                 </p>
 
                 <p>
                   As condições de reembolso, quando aplicáveis, seguirão as regras informadas na
-                  página de venda, na plataforma de pagamento utilizada ou na legislação vigente.
+                  página de venda, na Kiwify ou na legislação vigente.
                 </p>
               </div>
             </div>
