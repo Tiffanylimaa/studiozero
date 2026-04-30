@@ -15,9 +15,9 @@ import Footer from '@/components/Footer.jsx';
 import { Button } from '@/components/ui/button';
 
 const kiwifyAccessUrl = "";
-const instagramUrl = "";
+const instagramUrl = "https://www.instagram.com/0studio.zero";
 const communityUrl = "";
-const supportEmail = "";
+const supportEmail = "equipe@studiozero.io";
 
 const checklist = [
   'Confirmar o e-mail usado na compra',
@@ -51,6 +51,7 @@ function AcessoMaterialPage() {
           name="description"
           content="Página de pós-compra para acessar materiais digitais do Studio Zero pela Kiwify."
         />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <Header />
@@ -109,6 +110,11 @@ function AcessoMaterialPage() {
                   Link de acesso em breve. Use o e-mail enviado pela Kiwify após a compra.
                 </p>
               )}
+
+              <p className="text-sm text-muted-foreground mt-6 font-light leading-relaxed">
+                Produto vendido e entregue pela Kiwify. Esta página funciona como ecossistema
+                pós-compra do Studio Zero.
+              </p>
             </article>
 
             <aside className="bg-section-contrast border border-border p-8 md:p-10">
@@ -223,6 +229,25 @@ function AcessoMaterialPage() {
             <p className="text-muted-foreground font-light leading-relaxed mb-8">
               Se tiver dificuldade de acesso, entre em contato pelo e-mail de suporte informado pelo Studio Zero.
             </p>
+            <div className="border border-border bg-section-contrast p-6 mb-8">
+              <h3 className="font-syne text-xl font-bold text-foreground mb-4">Contatos</h3>
+              <div className="space-y-2 text-muted-foreground font-light">
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:text-primary transition-colors"
+                >
+                  Instagram: @0studio.zero
+                </a>
+                <a
+                  href={`mailto:${supportEmail}`}
+                  className="block hover:text-primary transition-colors"
+                >
+                  E-mail: equipe@studiozero.io
+                </a>
+              </div>
+            </div>
             {supportEmail ? (
               <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-6 font-syne uppercase tracking-widest">
                 <a href={`mailto:${supportEmail}`}>

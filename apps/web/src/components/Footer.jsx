@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -18,24 +17,21 @@ function Footer() {
           </div>
           
           <div className="space-y-6">
-            <h4 className="font-syne text-lg font-bold text-foreground">Contato</h4>
+            <h4 className="font-syne text-lg font-bold text-foreground">Contatos</h4>
             <div className="space-y-2 text-muted-foreground font-light">
-              <p>equipe@studiozero.io</p>
-              <p>WhatsApp: em breve</p>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="font-syne text-lg font-bold text-foreground">Redes</h4>
-            <div className="flex items-center space-x-4">
               <a 
-                href="https://www.instagram.com/0studio.zero/?utm_source=ig_web_button_share_sheet" 
+                href="https://www.instagram.com/0studio.zero" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Instagram"
+                className="block hover:text-primary transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                Instagram: @0studio.zero
+              </a>
+              <a
+                href="mailto:equipe@studiozero.io"
+                className="block hover:text-primary transition-colors"
+              >
+                E-mail: equipe@studiozero.io
               </a>
             </div>
           </div>
