@@ -56,10 +56,8 @@ function HomePage() {
     {
       title: "Packs de Repertório",
       price: "A partir de R$ 20,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
-      categoryUrl: "/produtos",
-      ctaLabel: "Ver packs disponíveis",
-      desc: "",
+      desc: "Materiais visuais e práticos para estudar músicas específicas por instrumento.",
+      cta: "Ver packs disponíveis",
       features: [
         'PDFs visuais e práticos',
         'Tablaturas organizadas',
@@ -70,10 +68,8 @@ function HomePage() {
     {
       title: "Bootcamp Zero ao Play",
       price: "A partir de R$ 30,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
-      categoryUrl: "/produtos",
-      ctaLabel: "Ver bootcamps",
-      desc: "",
+      desc: "Trilhas guiadas para sair da teoria solta e seguir um plano de prática com começo, meio e fim.",
+      cta: "Ver bootcamps",
       features: [
         'Cronograma de 30 dias',
         'Exercícios por etapa',
@@ -84,10 +80,8 @@ function HomePage() {
     {
       title: "Pacote VIP",
       price: "A partir de R$ 50,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
-      categoryUrl: "/produtos",
-      ctaLabel: "Ver pacotes VIP",
-      desc: "",
+      desc: "Uma experiência mais completa para quem quer estudar com mais direção, repertório e apoio visual.",
+      cta: "Ver pacotes VIP",
       features: [
         'PDFs com tablaturas e teoria',
         'Curadoria de vídeos educativos',
@@ -187,9 +181,12 @@ function HomePage() {
         {/* SECTION 4: PRODUCTS */}
         <section className="py-32 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 max-w-4xl mx-auto">
               <h2 className="mb-6">Escolha sua forma de estudar</h2>
-              <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground font-light mb-4">
+                Três formas de estudar música com direção: por repertório, por trilha prática ou por experiência completa.
+              </p>
+              <p className="text-muted-foreground font-light">
                 Cada linha reúne materiais para diferentes instrumentos, níveis de prática e objetivos de estudo.
               </p>
             </div>
@@ -213,23 +210,11 @@ function HomePage() {
 
                   <div className="mt-auto pt-6 border-t border-border/50">
                     <div className="text-3xl font-syne font-bold mb-8">{prod.price}</div>
-                    {prod.checkoutUrl ? (
-                      <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
-                        <a href={prod.checkoutUrl} target="_blank" rel="noopener noreferrer">
-                          Comprar agora
-                        </a>
-                      </Button>
-                    ) : prod.categoryUrl ? (
-                      <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
-                        <Link to={prod.categoryUrl}>
-                          {prod.ctaLabel}
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
-                        {prod.ctaLabel || 'Comprar em breve'}
-                      </Button>
-                    )}
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
+                      <Link to="/produtos">
+                        {prod.cta}
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               ))}
