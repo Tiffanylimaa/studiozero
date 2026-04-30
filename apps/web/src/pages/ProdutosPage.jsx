@@ -11,7 +11,7 @@ function ProdutosPage() {
     {
       title: "Packs de Repertório",
       desc: "",
-      price: "R$ 30,00",
+      price: "R$ 20,00",
       color: "border-border",
       features: [
         'PDFs Visuais e Práticos',
@@ -22,7 +22,7 @@ function ProdutosPage() {
     {
       title: "Bootcamp Zero ao Play",
       desc: "",
-      price: "R$ 40,00",
+      price: "R$ 30,00",
       color: "border-primary",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
@@ -34,7 +34,7 @@ function ProdutosPage() {
     {
       title: "Pacote VIP",
       desc: "",
-      price: "R$ 55,00",
+      price: "R$ 50,00",
       color: "border-secondary",
       features: [
         'Experiência Premium',

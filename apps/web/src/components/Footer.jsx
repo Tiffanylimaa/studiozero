@@ -47,9 +47,6 @@ function Footer() {
             <Link to="/privacidade" className="hover:text-foreground transition-colors">
               Termos e Privacidade
             </Link>
-            <Link to="/admin" className="hover:text-primary transition-colors">
-              Admin Login
-            </Link>
           </div>
         </div>
       </div>
