@@ -55,40 +55,45 @@ function HomePage() {
   const products = [
     {
       title: "Packs de Repertório",
-      price: "R$ 20,00",
+      price: "A partir de R$ 20,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      categoryUrl: "/produtos",
+      ctaLabel: "Ver packs disponíveis",
       desc: "",
       features: [
-        'PDFs Visuais e Práticos',
-        'Tablaturas',
-        'Parte Teórica Aplicada'
+        'PDFs visuais e práticos',
+        'Tablaturas organizadas',
+        'Parte teórica aplicada',
+        'Opções por instrumento'
       ]
     },
     {
       title: "Bootcamp Zero ao Play",
-      price: "R$ 30,00",
+      price: "A partir de R$ 30,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      categoryUrl: "/produtos",
+      ctaLabel: "Ver bootcamps",
       desc: "",
       features: [
-        'Cronograma de 30 dias: Planejamento diário focado em progresso real',
-        'PDFs exclusivos com tablaturas e teoria descomplicada',
-        'Seleção dos melhores vídeos com conteúdos práticos',
-        'Dicionário Visual de Acordes'
+        'Cronograma de 30 dias',
+        'Exercícios por etapa',
+        'Materiais de apoio',
+        'Opções por instrumento'
       ]
     },
     {
       title: "Pacote VIP",
-      price: "R$ 50,00",
+      price: "A partir de R$ 50,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      categoryUrl: "/produtos",
+      ctaLabel: "Ver pacotes VIP",
       desc: "",
       features: [
-        'Experiência Premium',
         'PDFs com tablaturas e teoria',
         'Curadoria de vídeos educativos',
-        'Apresentações de slides educativas e dinâmicas para um estudo de alto nível',
-        'Guia de Equipamento com custo-benefício',
-        'Cronograma de 30 dias',
-        'Dicionário Visual de Acordes'
+        'Guia de equipamento',
+        'Cronograma de estudo',
+        'Opções por instrumento'
       ]
     }
   ];
@@ -103,16 +108,16 @@ function HomePage() {
 
       <main>
         {/* SECTION 1: HERO */}
-        <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
+        <section className="relative min-h-[100svh] flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,32,42,0.05)_0%,transparent_70%)] pointer-events-none" />
           
           <motion.div 
             initial={{ opacity: 0, y: 40 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, ease: "easeOut" }} 
-            className="relative z-10 text-center max-w-6xl mx-auto space-y-12"
+            className="relative z-10 text-center max-w-6xl mx-auto space-y-8 md:space-y-12"
           >
-            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-12 h-32 opacity-80 mix-blend-screen">
+            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-8 md:mb-12 h-24 md:h-32 opacity-80 mix-blend-screen">
               {WAVEFORM_BARS.map((bar, i) => {
                 const isRed = i < 19;
                 const opacity = 0.4 + bar.h / 230 * 0.6;
@@ -121,13 +126,19 @@ function HomePage() {
               })}
             </div>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-syne font-bold leading-[0.85] tracking-tighter uppercase">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] font-syne font-bold leading-[0.92] tracking-tighter uppercase">
               Música de<br />forma visual.
             </h1>
             
             <p className="text-2xl md:text-3xl font-light text-muted-foreground tracking-wide">
               Do zero ao play.
             </p>
+
+            <Link to="/produtos" className="inline-block">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-6 font-syne uppercase tracking-widest">
+                Ver produtos
+              </Button>
+            </Link>
           </motion.div>
         </section>
 
@@ -176,7 +187,12 @@ function HomePage() {
         {/* SECTION 4: PRODUCTS */}
         <section className="py-32 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-16 text-center">Arsenal</h2>
+            <div className="text-center mb-16">
+              <h2 className="mb-6">Escolha sua forma de estudar</h2>
+              <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
+                Cada linha reúne materiais para diferentes instrumentos, níveis de prática e objetivos de estudo.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {products.map((prod, i) => (
                 <div key={i} className="bg-card border border-border p-10 flex flex-col h-full hover:border-primary/50 transition-colors">
@@ -203,9 +219,15 @@ function HomePage() {
                           Comprar agora
                         </a>
                       </Button>
+                    ) : prod.categoryUrl ? (
+                      <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
+                        <Link to={prod.categoryUrl}>
+                          {prod.ctaLabel}
+                        </Link>
+                      </Button>
                     ) : (
                       <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
-                        Comprar em breve
+                        {prod.ctaLabel || 'Comprar em breve'}
                       </Button>
                     )}
                   </div>

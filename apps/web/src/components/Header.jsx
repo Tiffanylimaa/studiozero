@@ -18,6 +18,7 @@ function Header() {
 
   const navLinks = [
     { name: 'Home',     path: '/' },
+    { name: 'Produtos', path: '/produtos' },
     { name: 'Sobre',    path: '/sobre' },
     { name: 'Guitarra', path: '/guitarra' },
     { name: 'Baixo',    path: '/baixo' },
@@ -89,7 +90,9 @@ function Header() {
           <button
             className="lg:hidden z-50 p-2 transition-colors hover:text-[#E8202A] text-[#E8E6E1]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             <AnimatePresence mode="wait">
               {isMobileMenuOpen ? (
@@ -124,6 +127,7 @@ function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             key="mobile-menu"
             initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
             animate={{ opacity: 1, clipPath: 'inset(0% 0% 0% 0%)' }}

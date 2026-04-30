@@ -29,16 +29,16 @@ const checklist = [
 
 const bonuses = [
   {
-    title: 'Bônus 1',
-    description: 'Material complementar',
+    title: 'Material complementar',
+    description: 'Arquivos extras vinculados ao produto comprado.',
   },
   {
-    title: 'Bônus 2',
-    description: 'Checklist extra',
+    title: 'Checklist extra',
+    description: 'Uma lista simples para orientar sua próxima prática.',
   },
   {
-    title: 'Bônus 3',
-    description: 'Guia rápido de aplicação',
+    title: 'Guia rápido',
+    description: 'Um resumo prático para aplicar o conteúdo com mais clareza.',
   },
 ];
 
