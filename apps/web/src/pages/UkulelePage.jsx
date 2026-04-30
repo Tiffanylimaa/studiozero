@@ -12,6 +12,7 @@ function UkulelePage() {
     {
       title: "Packs de Repertório",
       price: "R$ 20,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -21,6 +22,7 @@ function UkulelePage() {
     {
       title: "Bootcamp Zero ao Play",
       price: "R$ 30,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -31,6 +33,7 @@ function UkulelePage() {
     {
       title: "Pacote VIP",
       price: "R$ 50,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
@@ -84,9 +87,17 @@ function UkulelePage() {
                   <div className="text-4xl font-syne font-bold text-white mb-8">
                     {prod.price}
                   </div>
-                  <Button className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
-                    Comprar
-                  </Button>
+                  {prod.checkoutUrl ? (
+                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
+                      <a href={prod.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                        Comprar agora
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
+                      Comprar em breve
+                    </Button>
+                  )}
                 </div>
               </motion.div>
             ))}

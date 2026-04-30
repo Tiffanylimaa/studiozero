@@ -12,6 +12,7 @@ function BateriaPage() {
     {
       title: "PACKS DE REPERTÓRIO",
       price: "R$ 20,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -21,6 +22,7 @@ function BateriaPage() {
     {
       title: "BOOTCAMP ZERO AO PLAY",
       price: "R$ 30,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -30,6 +32,7 @@ function BateriaPage() {
     {
       title: "PACOTE VIP",
       price: "R$ 50,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
@@ -82,9 +85,17 @@ function BateriaPage() {
                   <div className="text-4xl font-syne font-bold mb-8 text-white">
                     {product.price}
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-none py-6 font-syne uppercase tracking-widest text-lg transition-all active:scale-[0.98]">
-                    COMPRAR
-                  </Button>
+                  {product.checkoutUrl ? (
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none py-6 font-syne uppercase tracking-widest text-lg transition-all active:scale-[0.98]">
+                      <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                        Comprar agora
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none py-6 font-syne uppercase tracking-widest text-lg transition-all active:scale-[0.98]">
+                      Comprar em breve
+                    </Button>
+                  )}
                 </div>
               </motion.div>
             ))}

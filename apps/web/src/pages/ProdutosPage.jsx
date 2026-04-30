@@ -12,6 +12,7 @@ function ProdutosPage() {
       title: "Packs de Repertório",
       desc: "",
       price: "R$ 20,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       color: "border-border",
       features: [
         'PDFs Visuais e Práticos',
@@ -23,6 +24,7 @@ function ProdutosPage() {
       title: "Bootcamp Zero ao Play",
       desc: "",
       price: "R$ 30,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       color: "border-primary",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
@@ -35,6 +37,7 @@ function ProdutosPage() {
       title: "Pacote VIP",
       desc: "",
       price: "R$ 50,00",
+      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       color: "border-secondary",
       features: [
         'Experiência Premium',
@@ -102,9 +105,17 @@ function ProdutosPage() {
                   <div className="text-4xl font-syne font-bold mb-10 text-white">
                     {prod.price}
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
-                    Adquirir
-                  </Button>
+                  {prod.checkoutUrl ? (
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
+                      <a href={prod.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                        Comprar agora
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
+                      Comprar em breve
+                    </Button>
+                  )}
                 </div>
               </motion.div>
             ))}

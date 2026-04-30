@@ -12,6 +12,7 @@ import ViolaoPage from './pages/ViolaoPage.jsx';
 import UkulelePage from './pages/UkulelePage.jsx';
 import PrivacidadePage from '@/pages/PrivacidadePage.jsx';
 import AcessoMaterialPage from '@/pages/AcessoMaterialPage.jsx';
+import ProdutosPage from '@/pages/ProdutosPage.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/teclado" element={<TecladoPage />} />
         <Route path="/violao" element={<ViolaoPage />} />
         <Route path="/ukulele" element={<UkulelePage />} />
+        <Route path="/produtos" element={<ProdutosPage />} />
         <Route path="/privacidade" element={<PrivacidadePage />} />
         <Route path="/acesso-material" element={<AcessoMaterialPage />} />
         <Route path="*" element={<NotFound />} />

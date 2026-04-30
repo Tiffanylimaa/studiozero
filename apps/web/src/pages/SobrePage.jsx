@@ -111,7 +111,7 @@ function SobrePage() {
         <section className="py-32 px-6 border-t border-border text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl mb-10">Faça parte da revolução.</h2>
-            <Link to="/">
+            <Link to="/produtos">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-12 py-8 text-xl font-syne uppercase tracking-widest">
                 Ver Produtos
               </Button>
