@@ -66,7 +66,7 @@ function BateriaPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border p-10 flex flex-col h-full hover:border-primary/50 transition-colors group"
+                className="bg-card border border-border p-8 md:p-10 flex flex-col h-full hover:border-primary/50 transition-colors group"
               >
                 <h2 className="text-2xl font-syne font-bold uppercase mb-8 group-hover:text-primary transition-colors">
                   {product.title}
@@ -86,13 +86,13 @@ function BateriaPage() {
                     {product.price}
                   </div>
                   {product.checkoutUrl ? (
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none py-6 font-syne uppercase tracking-widest text-lg transition-all active:scale-[0.98]">
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
                       <a href={product.checkoutUrl} target="_blank" rel="noopener noreferrer">
                         Comprar agora
                       </a>
                     </Button>
                   ) : (
-                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none py-6 font-syne uppercase tracking-widest text-lg transition-all active:scale-[0.98]">
+                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
                       Comprar em breve
                     </Button>
                   )}

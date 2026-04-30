@@ -30,7 +30,7 @@ const checklist = [
 const bonuses = [
   {
     title: 'Material complementar',
-    description: 'Arquivos extras vinculados ao produto comprado.',
+    description: 'Arquivos extras vinculados ao material comprado.',
   },
   {
     title: 'Checklist extra',
@@ -94,13 +94,13 @@ function AcessoMaterialPage() {
               </div>
 
               {kiwifyAccessUrl ? (
-                <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-10 py-7 font-syne uppercase tracking-widest">
+                <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-10 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                   <a href={kiwifyAccessUrl} target="_blank" rel="noopener noreferrer">
                     Acessar meu produto na Kiwify
                   </a>
                 </Button>
               ) : (
-                <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-10 py-7 font-syne uppercase tracking-widest">
+                <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-10 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                   Acessar meu produto na Kiwify
                 </Button>
               )}
@@ -134,7 +134,7 @@ function AcessoMaterialPage() {
         <section className="px-6 pb-16 md:pb-20">
           <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-8 md:p-10">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
-              Extras do produto
+              Extras do material
             </p>
             <h2 className="text-3xl md:text-4xl mb-8">Bônus incluídos</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -164,8 +164,8 @@ function AcessoMaterialPage() {
               </p>
             </div>
             <Link to="/produtos">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-7 font-syne uppercase tracking-widest whitespace-nowrap">
-                Ver outros produtos
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+                Ver outros materiais
               </Button>
             </Link>
           </div>
@@ -184,13 +184,13 @@ function AcessoMaterialPage() {
                   Acompanhe o Studio Zero no Instagram para receber ideias de prática, repertório e novidades dos próximos materiais.
                 </p>
                 {instagramUrl ? (
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm font-syne uppercase tracking-widest">
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                     <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
                       Acompanhar no Instagram
                     </a>
                   </Button>
                 ) : (
-                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm font-syne uppercase tracking-widest">
+                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                     Em breve
                   </Button>
                 )}
@@ -205,13 +205,13 @@ function AcessoMaterialPage() {
                   Entre para a comunidade ou lista de novidades para receber atualizações, bônus e avisos de novos produtos.
                 </p>
                 {communityUrl ? (
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm font-syne uppercase tracking-widest">
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                     <a href={communityUrl} target="_blank" rel="noopener noreferrer">
                       Entrar na comunidade
                     </a>
                   </Button>
                 ) : (
-                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm font-syne uppercase tracking-widest">
+                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                     Em breve
                   </Button>
                 )}
@@ -249,7 +249,7 @@ function AcessoMaterialPage() {
               </div>
             </div>
             {supportEmail ? (
-              <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-6 font-syne uppercase tracking-widest">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-6 min-h-[3.25rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                 <a href={`mailto:${supportEmail}`}>
                   Enviar e-mail
                 </a>

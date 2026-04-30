@@ -112,8 +112,8 @@ function SobrePage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl mb-10">Faça parte da revolução.</h2>
             <Link to="/produtos">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-12 py-8 text-xl font-syne uppercase tracking-widest">
-                Ver Produtos
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 md:px-12 py-6 md:py-8 text-base md:text-xl font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+                Ver materiais
               </Button>
             </Link>
           </div>

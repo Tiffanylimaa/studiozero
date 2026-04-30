@@ -68,7 +68,7 @@ function ViolaoPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#111111] border border-border p-10 flex flex-col h-full hover:border-[#E8202A]/50 transition-colors group"
+                className="bg-[#111111] border border-border p-8 md:p-10 flex flex-col h-full hover:border-[#E8202A]/50 transition-colors group"
               >
                 <h3 className="text-2xl font-syne font-bold text-white uppercase mb-8 group-hover:text-[#E8202A] transition-colors">
                   {prod.title}
@@ -88,13 +88,13 @@ function ViolaoPage() {
                     {prod.price}
                   </div>
                   {prod.checkoutUrl ? (
-                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
+                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       <a href={prod.checkoutUrl} target="_blank" rel="noopener noreferrer">
                         Comprar agora
                       </a>
                     </Button>
                   ) : (
-                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider text-lg transition-transform active:scale-[0.98]">
+                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       Comprar em breve
                     </Button>
                   )}

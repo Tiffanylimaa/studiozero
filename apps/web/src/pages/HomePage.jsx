@@ -130,7 +130,7 @@ function HomePage() {
 
             <Link to="/produtos" className="inline-block">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-6 font-syne uppercase tracking-widest">
-                Ver produtos
+                Ver linhas de estudo
               </Button>
             </Link>
           </motion.div>
@@ -192,7 +192,7 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {products.map((prod, i) => (
-                <div key={i} className="bg-card border border-border p-10 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div key={i} className="bg-card border border-border p-8 md:p-10 flex flex-col h-full hover:border-primary/50 transition-colors">
                   <h3 className="text-2xl mb-4">{prod.title}</h3>
                   
                   {prod.desc && (
@@ -210,7 +210,7 @@ function HomePage() {
 
                   <div className="mt-auto pt-6 border-t border-border/50">
                     <div className="text-3xl font-syne font-bold mb-8">{prod.price}</div>
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm py-6 font-syne uppercase tracking-wider">
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                       <Link to="/produtos">
                         {prod.cta}
                       </Link>
@@ -219,6 +219,10 @@ function HomePage() {
                 </div>
               ))}
             </div>
+
+            <p className="text-center text-sm md:text-base text-muted-foreground font-light mt-10 max-w-2xl mx-auto">
+              Na próxima etapa, você escolhe o instrumento e o tipo de material ideal para o seu momento.
+            </p>
           </div>
         </section>
 
