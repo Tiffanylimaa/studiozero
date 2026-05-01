@@ -17,7 +17,7 @@ function PrivacidadePage() {
       <Header />
 
       <main className="pt-28 md:pt-32">
-        <section className="px-6 py-16 md:py-20 border-b border-border">
+        <section className="px-6 py-14 md:py-16 border-b border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
               Studio Zero
@@ -34,8 +34,8 @@ function PrivacidadePage() {
           </div>
         </section>
 
-        <section className="px-6 py-16 md:py-20">
-          <div className="max-w-4xl mx-auto bg-card border border-border p-8 md:p-12 space-y-14">
+        <section className="px-6 py-14 md:py-16">
+          <div className="max-w-4xl mx-auto bg-card border border-border p-6 md:p-10 space-y-12">
             <div>
               <h2 className="text-3xl md:text-4xl text-primary mb-6">
                 Termos de Uso

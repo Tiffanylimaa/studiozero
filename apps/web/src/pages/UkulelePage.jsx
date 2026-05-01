@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 function UkulelePage() {
   const products = [
     {
-      title: "Packs de Repertório",
+      title: "Packs de Repertório para Ukulele",
       price: "R$ 20,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
@@ -20,7 +20,7 @@ function UkulelePage() {
       ]
     },
     {
-      title: "Bootcamp Zero ao Play",
+      title: "Bootcamp Zero ao Play para Ukulele",
       price: "R$ 30,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
@@ -31,7 +31,7 @@ function UkulelePage() {
       ]
     },
     {
-      title: "Pacote VIP",
+      title: "Pacote VIP para Ukulele",
       price: "R$ 50,00",
       checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
       features: [
@@ -63,22 +63,22 @@ function UkulelePage() {
         description="Diversão e musicalidade. O caminho mais rápido e leve para começar a tocar suas primeiras músicas." 
       />
 
-      <main className="py-24 px-6">
+      <main className="py-16 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map((prod, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#111111] border border-border p-8 md:p-10 flex flex-col h-full hover:border-[#2260CC]/50 transition-colors group"
+                className="bg-[#111111] border border-border p-6 md:p-8 flex flex-col h-full hover:border-[#2260CC]/50 transition-colors group"
               >
-                <h3 className="text-2xl font-syne font-bold text-white uppercase mb-8 group-hover:text-[#2260CC] transition-colors">
+                <h3 className="text-xl md:text-2xl font-syne font-bold text-white uppercase mb-6 group-hover:text-[#2260CC] transition-colors">
                   {prod.title}
                 </h3>
 
-                <ul className="space-y-4 mb-12 flex-grow">
+                <ul className="space-y-3 mb-8 flex-grow">
                   {prod.features.map((feat, j) => (
                     <li key={j} className="flex items-start text-sm text-foreground/80">
                       <Check className="w-5 h-5 text-[#2260CC] mr-3 shrink-0" />
@@ -88,17 +88,17 @@ function UkulelePage() {
                 </ul>
 
                 <div className="mt-auto">
-                  <div className="text-4xl font-syne font-bold text-white mb-8">
+                  <div className="text-3xl font-syne font-bold text-white mb-6">
                     {prod.price}
                   </div>
                   {prod.checkoutUrl ? (
-                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
+                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       <a href={prod.checkoutUrl} target="_blank" rel="noopener noreferrer">
                         Comprar agora
                       </a>
                     </Button>
                   ) : (
-                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
+                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       Comprar em breve
                     </Button>
                   )}

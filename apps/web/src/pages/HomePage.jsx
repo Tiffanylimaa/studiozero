@@ -141,7 +141,7 @@ function HomePage() {
         </section>
 
         {/* SECTION 2: INSTRUMENTS GRID */}
-        <section className="py-32 px-6 bg-background border-t border-border">
+        <section className="py-24 md:py-28 px-6 bg-background border-t border-border">
           <div className="max-w-7xl mx-auto">
             <h2 className="mb-16 text-center">Escolha seu instrumento</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -164,7 +164,7 @@ function HomePage() {
         </section>
 
         {/* SECTION 3: METHOD */}
-        <section className="py-32 px-6 bg-section-contrast border-y border-border">
+        <section className="py-24 md:py-28 px-6 bg-section-contrast border-y border-border">
           <div className="max-w-7xl mx-auto">
             <h2 className="mb-20 text-center">O Método Zero</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
@@ -183,7 +183,7 @@ function HomePage() {
         </section>
 
         {/* SECTION 4: PRODUCTS */}
-        <section className="py-32 px-6 bg-background">
+        <section className="py-24 md:py-28 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 max-w-4xl mx-auto">
               <h2 className="mb-6">Escolha sua forma de estudar</h2>
@@ -194,16 +194,16 @@ function HomePage() {
                 Cada linha reúne materiais para diferentes instrumentos, níveis de prática e objetivos de estudo.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {products.map((prod, i) => (
-                <div key={i} className="bg-card border border-border p-8 md:p-10 flex flex-col h-full hover:border-primary/50 transition-colors">
-                  <h3 className="text-2xl mb-4">{prod.title}</h3>
+                <div key={i} className="bg-card border border-border p-6 md:p-8 flex flex-col h-full hover:border-primary/50 transition-colors">
+                  <h3 className="text-xl md:text-2xl mb-4">{prod.title}</h3>
                   
                   {prod.desc && (
-                    <p className="text-muted-foreground font-light mb-8">{prod.desc}</p>
+                    <p className="text-muted-foreground font-light mb-6">{prod.desc}</p>
                   )}
                   
-                  <ul className={`space-y-4 mb-12 flex-grow ${!prod.desc ? 'mt-4' : ''}`}>
+                  <ul className={`space-y-3 mb-8 flex-grow ${!prod.desc ? 'mt-4' : ''}`}>
                     {prod.features.map((feat, j) => (
                       <li key={j} className="flex items-start text-sm text-foreground/80">
                         <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -213,8 +213,8 @@ function HomePage() {
                   </ul>
 
                   <div className="mt-auto pt-6 border-t border-border/50">
-                    <div className="text-3xl font-syne font-bold mb-8">{prod.price}</div>
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.5rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
+                    <div className="text-2xl md:text-3xl font-syne font-bold mb-6">{prod.price}</div>
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                       <Link to="/produtos">
                         {prod.cta}
                       </Link>

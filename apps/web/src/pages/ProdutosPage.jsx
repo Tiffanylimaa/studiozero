@@ -88,19 +88,19 @@ function ProdutosPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card border ${line.color} p-8 md:p-10 relative overflow-hidden group`}
+                className={`bg-card border ${line.color} p-6 md:p-8 relative overflow-hidden group`}
               >
                 {/* Subtle background glow on hover */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8">
                   <div className="flex flex-col">
-                    <h2 className="text-3xl mb-4">{line.title}</h2>
-                    <p className="text-muted-foreground font-light mb-8 leading-relaxed">
+                    <h2 className="text-2xl md:text-3xl mb-4">{line.title}</h2>
+                    <p className="text-muted-foreground font-light mb-6 leading-relaxed">
                       {line.desc}
                     </p>
 
-                    <ul className="space-y-4 mb-10">
+                    <ul className="space-y-3 mb-8">
                       {line.features.map((feat, j) => (
                         <li key={j} className="flex items-start text-sm font-light text-foreground/80">
                           <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -110,10 +110,10 @@ function ProdutosPage() {
                     </ul>
 
                     <div className="mt-auto pt-6 border-t border-border/50">
-                      <div className="text-4xl font-syne font-bold mb-8 text-white">
+                      <div className="text-3xl font-syne font-bold mb-6 text-white">
                         {line.price}
                       </div>
-                      <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-6 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
+                      <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-7 py-4 md:py-5 min-h-[3rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                         Comprar em breve
                       </Button>
                     </div>

@@ -57,7 +57,7 @@ function AcessoMaterialPage() {
       <Header />
 
       <main className="pt-28 md:pt-32">
-        <section className="relative overflow-hidden border-b border-border px-6 py-16 md:py-24">
+        <section className="relative overflow-hidden border-b border-border px-6 py-14 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,32,42,0.16),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(34,96,204,0.12),transparent_34%)] pointer-events-none" />
           <div className="relative max-w-5xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
@@ -73,9 +73,9 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 py-16 md:py-20">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8">
-            <article className="bg-card border border-border p-8 md:p-12">
+        <section className="px-6 py-14 md:py-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6">
+            <article className="bg-card border border-border p-6 md:p-8">
               <div className="flex items-start justify-between gap-6 mb-10">
                 <div>
                   <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
@@ -94,13 +94,13 @@ function AcessoMaterialPage() {
               </div>
 
               {kiwifyAccessUrl ? (
-                <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-10 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+                <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-8 py-4 md:py-5 min-h-[3.1rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                   <a href={kiwifyAccessUrl} target="_blank" rel="noopener noreferrer">
                     Acessar meu produto na Kiwify
                   </a>
                 </Button>
               ) : (
-                <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-10 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+                <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-8 py-4 md:py-5 min-h-[3.1rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                   Acessar meu produto na Kiwify
                 </Button>
               )}
@@ -117,7 +117,7 @@ function AcessoMaterialPage() {
               </p>
             </article>
 
-            <aside className="bg-section-contrast border border-border p-8 md:p-10">
+            <aside className="bg-section-contrast border border-border p-6 md:p-8">
               <h2 className="text-3xl md:text-4xl mb-8">Primeiros passos</h2>
               <ul className="space-y-5">
                 {checklist.map((item) => (
@@ -132,7 +132,7 @@ function AcessoMaterialPage() {
         </section>
 
         <section className="px-6 pb-16 md:pb-20">
-          <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-8 md:p-10">
+          <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-6 md:p-8">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
               Extras do material
             </p>
@@ -154,8 +154,8 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 py-16 md:py-20 border-y border-border bg-section-contrast">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <section className="px-6 py-14 md:py-16 border-y border-border bg-section-contrast">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <h2 className="text-4xl md:text-5xl mb-5">Quer continuar evoluindo?</h2>
               <p className="text-muted-foreground font-light leading-relaxed max-w-2xl">
@@ -164,14 +164,14 @@ function AcessoMaterialPage() {
               </p>
             </div>
             <Link to="/produtos">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-7 min-h-[3.5rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-7 py-4 md:py-5 min-h-[3.1rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                 Ver outros materiais
               </Button>
             </Link>
           </div>
         </section>
 
-        <section className="px-6 py-16 md:py-20">
+        <section className="px-6 py-14 md:py-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl mb-10 text-center">Fique por perto</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -221,7 +221,7 @@ function AcessoMaterialPage() {
         </section>
 
         <section className="px-6 pb-16 md:pb-20">
-          <div className="max-w-5xl mx-auto bg-card border border-border p-8 md:p-10">
+          <div className="max-w-5xl mx-auto bg-card border border-border p-6 md:p-8">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
               Suporte
             </p>
@@ -249,7 +249,7 @@ function AcessoMaterialPage() {
               </div>
             </div>
             {supportEmail ? (
-              <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-6 min-h-[3.25rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-7 py-4 md:py-5 min-h-[3rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                 <a href={`mailto:${supportEmail}`}>
                   Enviar e-mail
                 </a>

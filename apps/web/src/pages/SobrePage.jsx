@@ -19,7 +19,7 @@ function SobrePage() {
 
       <main className="pt-32">
         {/* Mission */}
-        <section className="py-20 px-6">
+        <section className="py-16 md:py-20 px-6">
           <div className="max-w-5xl mx-auto">
             <motion.h1 initial={{
             opacity: 0,
@@ -48,7 +48,7 @@ function SobrePage() {
         </section>
 
         {/* Sobre a Criadora */}
-        <section className="py-20 px-6 bg-section-contrast border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-section-contrast border-y border-border">
           <div className="max-w-5xl mx-auto">
             <motion.h2 initial={{
             opacity: 0,
@@ -81,7 +81,7 @@ function SobrePage() {
         </section>
 
         {/* Philosophy */}
-        <section className="py-32 px-6 bg-background">
+        <section className="py-24 md:py-28 px-6 bg-background">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-6xl mb-8">A Filosofia<br />Visual</h2>
@@ -96,23 +96,23 @@ function SobrePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-card border border-border flex items-center justify-center p-8 text-center">
-                <span className="font-syne text-2xl text-primary">Ensino Visual</span>
+                <span className="font-syne text-xl md:text-2xl text-primary">Ensino Visual</span>
               </div>
               <div className="aspect-square bg-card border border-border flex items-center justify-center p-8 text-center mt-8">
-                <span className="font-syne text-2xl text-secondary">Sem Enrolação</span>
+                <span className="font-syne text-xl md:text-2xl text-secondary">Sem Enrolação</span>
               </div>
               <div className="aspect-square bg-card border border-border flex items-center justify-center p-8 text-center -mt-8">
-                <span className="font-syne text-2xl text-foreground">100% Prático</span>
+                <span className="font-syne text-xl md:text-2xl text-foreground">100% Prático</span>
               </div>
               <div className="aspect-square bg-card border border-border flex items-center justify-center p-8 text-center">
-                <span className="font-syne text-2xl text-primary">Foco no Play</span>
+                <span className="font-syne text-xl md:text-2xl text-primary">Foco no Play</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-32 px-6 border-t border-border text-center">
+        <section className="py-24 md:py-28 px-6 border-t border-border text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl mb-10">Faça parte da revolução.</h2>
             <Link to="/produtos">
