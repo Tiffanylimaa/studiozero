@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
@@ -43,12 +43,12 @@ function NotFound() {
       <div className="text-center space-y-6 px-4">
         <h1 className="text-8xl font-syne font-bold text-primary">404</h1>
         <p className="text-2xl font-light text-muted-foreground uppercase tracking-widest">Sinal Perdido</p>
-        <a 
-          href="/" 
+        <Link
+          to="/"
           className="inline-block px-8 py-4 bg-card border border-border text-foreground font-syne uppercase tracking-widest hover:border-primary transition-colors"
         >
           Voltar à Base
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -96,6 +96,10 @@ function HomePage() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
       <Helmet>
         <title>Studio Zero | Do zero ao play</title>
+        <meta
+          name="description"
+          content="Materiais digitais de música para estudar por repertório, trilha prática ou experiência completa no Studio Zero."
+        />
       </Helmet>
 
       <Header />

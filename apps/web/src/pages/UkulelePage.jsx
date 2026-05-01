@@ -50,6 +50,10 @@ function UkulelePage() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
       <Helmet>
         <title>STUDIO ZERO | UKULELE</title>
+        <meta
+          name="description"
+          content="Materiais digitais de ukulele do Studio Zero para estudar músicas, acordes e prática guiada de forma visual."
+        />
       </Helmet>
 
       <Header />

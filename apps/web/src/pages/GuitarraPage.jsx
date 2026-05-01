@@ -50,6 +50,10 @@ function GuitarraPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Helmet>
         <title>Guitarra | Studio Zero</title>
+        <meta
+          name="description"
+          content="Materiais digitais de guitarra do Studio Zero com repertório, trilhas de prática e apoio visual para estudar melhor."
+        />
       </Helmet>
 
       <Header />

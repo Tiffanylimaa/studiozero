@@ -48,6 +48,10 @@ function BateriaPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Helmet>
         <title>Bateria | Studio Zero</title>
+        <meta
+          name="description"
+          content="Materiais digitais de bateria do Studio Zero para estudar ritmo, coordenação, repertório e prática guiada."
+        />
       </Helmet>
 
       <Header />

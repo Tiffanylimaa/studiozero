@@ -9,6 +9,10 @@ function SobrePage() {
   return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Sobre | Studio Zero</title>
+        <meta
+          name="description"
+          content="Conheça a proposta do Studio Zero: aprendizado musical visual, prático e direto para diferentes instrumentos."
+        />
       </Helmet>
 
       <Header />

@@ -50,6 +50,10 @@ function TecladoPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Helmet>
         <title>Teclado | Studio Zero</title>
+        <meta
+          name="description"
+          content="Materiais digitais de teclado do Studio Zero para estudar harmonia, repertório e prática musical com apoio visual."
+        />
       </Helmet>
 
       <Header />

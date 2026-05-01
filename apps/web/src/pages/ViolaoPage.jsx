@@ -50,6 +50,10 @@ function ViolaoPage() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
       <Helmet>
         <title>STUDIO ZERO | VIOLÃO</title>
+        <meta
+          name="description"
+          content="Materiais digitais de violão do Studio Zero com PDFs visuais, repertórios, prática guiada e apoio de estudo."
+        />
       </Helmet>
 
       <Header />

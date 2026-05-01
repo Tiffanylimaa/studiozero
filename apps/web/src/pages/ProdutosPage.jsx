@@ -58,6 +58,10 @@ function ProdutosPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Produtos | Studio Zero</title>
+        <meta
+          name="description"
+          content="Catálogo de materiais Studio Zero por linha de estudo e instrumento: packs de repertório, bootcamps e pacotes VIP."
+        />
       </Helmet>
 
       <Header />
