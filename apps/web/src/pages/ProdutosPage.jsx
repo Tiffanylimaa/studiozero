@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
-import { Button } from '@/components/ui/button';
 
 function ProdutosPage() {
   const instruments = [
@@ -110,12 +109,12 @@ function ProdutosPage() {
                     </ul>
 
                     <div className="mt-auto pt-6 border-t border-border/50">
-                      <div className="text-3xl font-syne font-bold mb-6 text-white">
+                      <div className="text-3xl font-syne font-bold mb-4 text-white">
                         {line.price}
                       </div>
-                      <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-7 py-4 md:py-5 min-h-[3rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
-                        Comprar em breve
-                      </Button>
+                      <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                        Escolha o instrumento ao lado para ver os materiais disponíveis.
+                      </p>
                     </div>
                   </div>
 
