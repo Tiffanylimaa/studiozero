@@ -12,7 +12,7 @@ function BateriaPage() {
     {
       title: "Packs de Repertório para Bateria",
       price: "R$ 20,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/vNQA722", // Substituir pelo link de checkout da Kiwify.
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function BateriaPage() {
     {
       title: "Bootcamp Zero ao Play para Bateria",
       price: "R$ 30,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/an1zH2A", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -32,7 +32,7 @@ function BateriaPage() {
     {
       title: "Pacote VIP para Bateria",
       price: "R$ 50,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/UhAK76r", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',

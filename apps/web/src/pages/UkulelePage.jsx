@@ -12,7 +12,7 @@ function UkulelePage() {
     {
       title: "Packs de Repertório para Ukulele",
       price: "R$ 20,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/atDRdOs", // Substituir pelo link de checkout da Kiwify.
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function UkulelePage() {
     {
       title: "Bootcamp Zero ao Play para Ukulele",
       price: "R$ 30,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/spIZ4Pq", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function UkulelePage() {
     {
       title: "Pacote VIP para Ukulele",
       price: "R$ 50,00",
-      checkoutUrl: "", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/ElVyj2k", // Substituir pelo link de checkout da Kiwify.
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
