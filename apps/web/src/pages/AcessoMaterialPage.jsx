@@ -4,20 +4,18 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   CheckCircle2,
-  Gift,
   Instagram,
   Mail,
   ShieldCheck,
-  Users,
 } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { Button } from '@/components/ui/button';
 
-const kiwifyAccessUrl = "";
+const kiwifyAccessUrl = "https://kiwify.com.br/";
 const instagramUrl = "https://www.instagram.com/0studio.zero";
-const communityUrl = "";
 const supportEmail = "equipe@studiozero.io";
+const emailListSubject = "Quero entrar na lista de transmissão do Studio Zero";
 
 const checklist = [
   'Confirmar o e-mail usado na compra',
@@ -27,18 +25,18 @@ const checklist = [
   'Salvar esta página para consultar depois',
 ];
 
-const bonuses = [
+const similarItems = [
   {
-    title: 'Material complementar',
-    description: 'Arquivos extras vinculados ao material comprado.',
+    title: 'Packs de Repertório',
+    description: 'Materiais visuais para estudar músicas específicas por instrumento.',
   },
   {
-    title: 'Checklist extra',
-    description: 'Uma lista simples para orientar sua próxima prática.',
+    title: 'Bootcamp Zero ao Play',
+    description: 'Trilhas guiadas para organizar sua prática em etapas simples.',
   },
   {
-    title: 'Guia rápido',
-    description: 'Um resumo prático para aplicar o conteúdo com mais clareza.',
+    title: 'Pacote VIP',
+    description: 'Uma experiência mais completa com repertório, teoria e apoio visual.',
   },
 ];
 
@@ -96,12 +94,12 @@ function AcessoMaterialPage() {
               {kiwifyAccessUrl ? (
                 <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-8 py-4 md:py-5 min-h-[3.1rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
                   <a href={kiwifyAccessUrl} target="_blank" rel="noopener noreferrer">
-                    Acessar meu produto na Kiwify
+                    Ir para a Kiwify
                   </a>
                 </Button>
               ) : (
                 <Button disabled className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white rounded-sm px-5 md:px-8 py-4 md:py-5 min-h-[3.1rem] font-syne uppercase tracking-wider whitespace-normal text-center leading-tight">
-                  Acessar meu produto na Kiwify
+                  Ir para a Kiwify
                 </Button>
               )}
 
@@ -134,19 +132,25 @@ function AcessoMaterialPage() {
         <section className="px-6 pb-16 md:pb-20">
           <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-6 md:p-8">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
-              Extras do material
+              Indicações Studio Zero
             </p>
-            <h2 className="text-3xl md:text-4xl mb-8">Bônus incluídos</h2>
+            <h2 className="text-3xl md:text-4xl mb-4">Itens similares indicados</h2>
+            <p className="text-muted-foreground font-light leading-relaxed max-w-3xl mb-8">
+              Depois de acessar seu material, você pode continuar estudando com outras linhas do
+              Studio Zero que combinam com o seu momento.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {bonuses.map((bonus) => (
-                <div key={bonus.title} className="border border-border bg-card p-6">
-                  <Gift className="w-6 h-6 text-primary mb-5" />
-                  <h3 className="text-xl mb-3">{bonus.title}</h3>
+              {similarItems.map((item) => (
+                <div key={item.title} className="border border-border bg-card p-6">
+                  <ArrowRight className="w-5 h-5 text-primary mb-5" />
+                  <h3 className="text-xl mb-3">{item.title}</h3>
                   <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6">
-                    {bonus.description}
+                    {item.description}
                   </p>
-                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm font-syne uppercase tracking-widest">
-                    Em breve
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
+                    <Link to="/produtos">
+                      Ver materiais
+                    </Link>
                   </Button>
                 </div>
               ))}
@@ -198,23 +202,18 @@ function AcessoMaterialPage() {
 
               <div className="bg-card border border-border p-8">
                 <div className="w-12 h-12 border border-primary/40 bg-primary/10 flex items-center justify-center text-primary mb-6">
-                  {communityUrl ? <Users className="w-6 h-6" /> : <Mail className="w-6 h-6" />}
+                  <Mail className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl mb-4">Comunidade e novidades</h3>
+                <h3 className="text-2xl mb-4">Lista de transmissão por e-mail</h3>
                 <p className="text-muted-foreground font-light leading-relaxed mb-8">
-                  Entre para a comunidade ou lista de novidades para receber atualizações, bônus e avisos de novos produtos.
+                  Entre na lista para receber atualizações, avisos de novos materiais e novidades
+                  do Studio Zero direto no seu e-mail.
                 </p>
-                {communityUrl ? (
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
-                    <a href={communityUrl} target="_blank" rel="noopener noreferrer">
-                      Entrar na comunidade
-                    </a>
-                  </Button>
-                ) : (
-                  <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
-                    Em breve
-                  </Button>
-                )}
+                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-5 min-h-[3.25rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
+                  <a href={`mailto:${supportEmail}?subject=${encodeURIComponent(emailListSubject)}`}>
+                    Entrar na lista
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

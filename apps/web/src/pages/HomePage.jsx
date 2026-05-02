@@ -106,16 +106,16 @@ function HomePage() {
 
       <main>
         {/* SECTION 1: HERO */}
-        <section className="relative min-h-[100svh] flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
+        <section className="relative min-h-[92svh] md:min-h-[96svh] flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,32,42,0.05)_0%,transparent_70%)] pointer-events-none" />
           
           <motion.div 
             initial={{ opacity: 0, y: 40 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, ease: "easeOut" }} 
-            className="relative z-10 text-center max-w-6xl mx-auto space-y-8 md:space-y-12"
+            className="relative z-10 text-center max-w-6xl mx-auto space-y-7 md:space-y-9"
           >
-            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-8 md:mb-12 h-24 md:h-32 opacity-80 mix-blend-screen">
+            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-6 md:mb-8 h-20 md:h-28 opacity-80 mix-blend-screen">
               {WAVEFORM_BARS.map((bar, i) => {
                 const isRed = i < 19;
                 const opacity = 0.4 + bar.h / 230 * 0.6;
@@ -124,7 +124,7 @@ function HomePage() {
               })}
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] font-syne font-bold leading-[0.92] tracking-tighter uppercase">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.25rem] font-syne font-bold leading-[0.95] tracking-tighter uppercase">
               Música de<br />forma visual.
             </h1>
             
@@ -133,7 +133,7 @@ function HomePage() {
             </p>
 
             <Link to="/produtos" className="inline-block">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 py-6 font-syne uppercase tracking-widest">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-6 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
                 Ver linhas de estudo
               </Button>
             </Link>

@@ -12,7 +12,7 @@ function ViolaoPage() {
     {
       title: "Packs de Repertório para Violão",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.kiwify.com.br/YMC9Z0d", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/YMC9Z0d",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function ViolaoPage() {
     {
       title: "Bootcamp Zero ao Play para Violão",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.kiwify.com.br/lgzNX2p", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/lgzNX2p",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function ViolaoPage() {
     {
       title: "Pacote VIP para Violão",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.kiwify.com.br/Dghjekh", // Substituir pelo link de checkout da Kiwify.
+      checkoutUrl: "https://pay.kiwify.com.br/Dghjekh",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
