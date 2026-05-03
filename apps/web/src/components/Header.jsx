@@ -16,6 +16,10 @@ function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const navLinks = [
     { name: 'Home',     path: '/' },
     { name: 'Produtos', path: '/produtos' },
@@ -133,26 +137,34 @@ function Header() {
             animate={{ opacity: 1, clipPath: 'inset(0% 0% 0% 0%)' }}
             exit={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 pt-20 lg:hidden bg-black/95 backdrop-blur-xl overflow-y-auto pb-10"
+            className="absolute left-0 right-0 top-full z-40 lg:hidden border-t border-border bg-black/95 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.55)]"
           >
-            {navLinks.map((link, i) => (
-              <motion.div
-                key={link.path}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ delay: i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <Link
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-syne font-bold tracking-widest uppercase transition-colors duration-300 hover:text-[#E8202A]"
-                  style={{ color: isActive(link.path) ? '#E8202A' : '#E8E6E1' }}
-                >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
+            <div className="max-h-[calc(100svh-6rem)] overflow-y-auto px-6 py-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {navLinks.map((link, i) => (
+                  <motion.div
+                    key={link.path}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ delay: i * 0.035, duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex min-h-[3.4rem] items-center justify-between border border-border bg-[#0D0D0D] px-5 py-4 font-syne text-base font-bold uppercase tracking-widest transition-colors duration-300 hover:border-[#E8202A] hover:text-[#E8202A]"
+                      style={{
+                        color: isActive(link.path) ? '#E8202A' : '#E8E6E1',
+                        borderColor: isActive(link.path) ? 'rgba(232,32,42,0.65)' : undefined,
+                      }}
+                    >
+                      <span>{link.name}</span>
+                      <span className="h-1.5 w-1.5 bg-current" />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
