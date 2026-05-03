@@ -72,19 +72,20 @@ function AcessoMaterialPage() {
         <section className="relative overflow-hidden border-b border-border px-6 py-14 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,32,42,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(34,96,204,0.1),transparent_34%)] pointer-events-none" />
           <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-10 xl:gap-14 lg:items-end">
-            <div>
+            <div className="min-w-0">
               <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
                 Acesso ao material
               </p>
-              <h1 className="font-syne font-bold text-[clamp(3.25rem,8vw,6.5rem)] leading-[0.95] tracking-normal mb-7 max-w-3xl">
-                Compra confirmada.
+              <h1 className="font-syne font-bold text-[clamp(3.1rem,6vw,5.1rem)] leading-[0.92] tracking-normal mb-7 max-w-[680px]">
+                <span className="block">Compra</span>
+                <span className="block">confirmada.</span>
               </h1>
-              <p className="font-syne font-bold uppercase text-primary text-[clamp(1.5rem,4vw,2.5rem)] leading-[1.05] tracking-normal max-w-4xl">
+              <p className="font-syne font-bold uppercase text-primary text-[clamp(1.35rem,3vw,2.15rem)] leading-[1.08] tracking-normal max-w-[720px]">
                 Seu material já foi enviado por e-mail e WhatsApp!
               </p>
             </div>
 
-            <div className="bg-card border border-border p-6 md:p-8">
+            <div className="min-w-0 bg-card border border-border p-6 md:p-8">
               <div className="w-14 h-14 border border-primary/40 bg-primary/10 flex items-center justify-center text-primary mb-6">
                 <Inbox className="w-7 h-7" />
               </div>
