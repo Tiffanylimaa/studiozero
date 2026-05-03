@@ -12,7 +12,7 @@ function GuitarraPage() {
     {
       title: "Packs de Repertório para Guitarra",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=42A8mJ",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=FrPwiN",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function GuitarraPage() {
     {
       title: "Bootcamp Zero ao Play para Guitarra",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=g00Lqd",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=4Fpbw7",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function GuitarraPage() {
     {
       title: "Pacote VIP para Guitarra",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=wP70dY",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=kfjJWB",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',

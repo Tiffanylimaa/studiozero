@@ -12,7 +12,7 @@ function BateriaPage() {
     {
       title: "Packs de Repertório para Bateria",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=hMJjPV",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=7dKMDB",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function BateriaPage() {
     {
       title: "Bootcamp Zero ao Play para Bateria",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=i65wS4",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=hMJjPV",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -32,7 +32,7 @@ function BateriaPage() {
     {
       title: "Pacote VIP para Bateria",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=4Fpbw7",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=gqjA7o",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',

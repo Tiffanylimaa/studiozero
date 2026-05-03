@@ -12,7 +12,7 @@ function UkulelePage() {
     {
       title: "Packs de Repertório para Ukulele",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=7dKMDB",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=GpM4a1",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function UkulelePage() {
     {
       title: "Bootcamp Zero ao Play para Ukulele",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=FrPwiN",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=xw0Bew",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function UkulelePage() {
     {
       title: "Pacote VIP para Ukulele",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=158Sz1",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=42A8mJ",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
