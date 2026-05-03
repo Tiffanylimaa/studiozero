@@ -76,14 +76,11 @@ function AcessoMaterialPage() {
               <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
                 Acesso ao material
               </p>
-              <h1 className="font-syne font-bold text-[clamp(2.75rem,7vw,5.9rem)] leading-[0.98] tracking-normal mb-8 max-w-4xl">
-                <span className="block text-white">Compra confirmada.</span>
-                <span className="block text-foreground/90">Seu material</span>
-                <span className="block text-primary">já está a caminho.</span>
+              <h1 className="font-syne font-bold text-[clamp(3.25rem,8vw,6.5rem)] leading-[0.95] tracking-normal mb-7 max-w-3xl">
+                Compra confirmada.
               </h1>
-              <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl leading-relaxed">
-                O link de acesso foi enviado automaticamente para o e-mail e WhatsApp informados na compra.
-                Se não localizar de imediato, verifique também sua caixa de spam, promoções ou mensagens recentes.
+              <p className="font-syne font-bold uppercase text-primary text-[clamp(1.5rem,4vw,2.5rem)] leading-[1.05] tracking-normal max-w-4xl">
+                Seu material já foi enviado por e-mail e WhatsApp!
               </p>
             </div>
 
