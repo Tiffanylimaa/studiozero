@@ -71,13 +71,15 @@ function AcessoMaterialPage() {
       <main className="pt-28 md:pt-32">
         <section className="relative overflow-hidden border-b border-border px-6 py-14 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,32,42,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(34,96,204,0.1),transparent_34%)] pointer-events-none" />
-          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:items-end">
+          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-10 xl:gap-14 lg:items-end">
             <div>
               <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
                 Acesso ao material
               </p>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl mb-8 leading-none max-w-5xl">
-                Compra confirmada. Seu material já está a caminho.
+              <h1 className="font-syne font-bold text-[clamp(2.75rem,7vw,5.9rem)] leading-[0.98] tracking-normal mb-8 max-w-4xl">
+                <span className="block text-white">Compra confirmada.</span>
+                <span className="block text-foreground/90">Seu material</span>
+                <span className="block text-primary">já está a caminho.</span>
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl leading-relaxed">
                 O link de acesso foi enviado automaticamente para o e-mail e WhatsApp informados na compra.
