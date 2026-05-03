@@ -33,7 +33,7 @@ function ViolaoPage() {
     {
       title: "Pacote VIP para Violão",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.kiwify.com.br/Dghjekh",
+      checkoutUrl: "https://studiozero.io/violao",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
