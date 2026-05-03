@@ -12,7 +12,7 @@ function TecladoPage() {
     {
       title: "Packs de Repertório para Teclado",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.kiwify.com.br/nnnVQH4",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=GpM4a1",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function TecladoPage() {
     {
       title: "Bootcamp Zero ao Play para Teclado",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.kiwify.com.br/OMzL6Mr",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=Q05erN",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function TecladoPage() {
     {
       title: "Pacote VIP para Teclado",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.kiwify.com.br/JJAGx0k",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=ge8N8E",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',

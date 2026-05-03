@@ -12,7 +12,7 @@ function BaixoPage() {
     {
       title: "Packs de Repertório para Baixo",
       price: "R$ 20,00",
-      checkoutUrl: "https://pay.kiwify.com.br/nMjBm6l",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=xw0Bew",
       features: [
         'PDFs Visuais e Práticos',
         'Tablaturas',
@@ -22,7 +22,7 @@ function BaixoPage() {
     {
       title: "Bootcamp Zero ao Play para Baixo",
       price: "R$ 30,00",
-      checkoutUrl: "https://pay.kiwify.com.br/pKEe2Pb",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=mCPhYk",
       features: [
         'Cronograma de 30 dias: Planejamento diário focado em progresso real',
         'PDFs exclusivos com tablaturas e teoria descomplicada',
@@ -33,7 +33,7 @@ function BaixoPage() {
     {
       title: "Pacote VIP para Baixo",
       price: "R$ 50,00",
-      checkoutUrl: "https://pay.kiwify.com.br/k2mFdHG",
+      checkoutUrl: "https://pay.lowify.com.br/checkout?product_id=xDi9R6",
       features: [
         'Experiência Premium',
         'PDFs com tablaturas e teoria',
