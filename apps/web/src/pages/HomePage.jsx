@@ -109,14 +109,14 @@ function HomePage() {
 
       <main>
         {/* SECTION 1: HERO */}
-        <section className="relative min-h-[92svh] md:min-h-[96svh] flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
+        <section className="relative min-h-[86svh] md:min-h-[90svh] flex flex-col items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,32,42,0.05)_0%,transparent_70%)] pointer-events-none" />
           
           <motion.div 
             initial={{ opacity: 0, y: 40 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, ease: "easeOut" }} 
-            className="relative z-10 text-center max-w-6xl mx-auto space-y-7 md:space-y-9"
+            className="relative z-10 text-center max-w-6xl mx-auto space-y-6 md:space-y-8"
           >
             <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-6 md:mb-8 h-20 md:h-28 opacity-80 mix-blend-screen">
               {WAVEFORM_BARS.map((bar, i) => {
@@ -127,11 +127,11 @@ function HomePage() {
               })}
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.25rem] font-syne font-bold leading-[0.95] tracking-tighter uppercase">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-syne font-bold leading-[0.95] tracking-tighter uppercase">
               Música de<br />forma visual.
             </h1>
             
-            <p className="text-2xl md:text-3xl font-light text-muted-foreground tracking-wide">
+            <p className="text-xl md:text-2xl font-light text-muted-foreground tracking-wide">
               Do zero ao play.
             </p>
 
@@ -144,9 +144,9 @@ function HomePage() {
         </section>
 
         {/* SECTION 2: INSTRUMENTS GRID */}
-        <section className="py-24 md:py-28 px-6 bg-background border-t border-border">
+        <section className="py-20 md:py-24 px-6 bg-background border-t border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-16 text-center">Escolha seu instrumento</h2>
+            <h2 className="mb-10 md:mb-12 text-center">Escolha seu instrumento</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {instruments.map((inst, i) => (
                 <motion.div 
@@ -167,10 +167,10 @@ function HomePage() {
         </section>
 
         {/* SECTION 3: METHOD */}
-        <section className="py-24 md:py-28 px-6 bg-section-contrast border-y border-border">
+        <section className="py-20 md:py-24 px-6 bg-section-contrast border-y border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-20 text-center">O Método Zero</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+            <h2 className="mb-12 md:mb-14 text-center">O Método Zero</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 relative">
               <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-border" />
               {steps.map((step, i) => (
                 <div key={i} className="relative z-10 bg-section-contrast pt-4">
@@ -186,9 +186,9 @@ function HomePage() {
         </section>
 
         {/* SECTION 4: PRODUCTS */}
-        <section className="py-24 md:py-28 px-6 bg-background">
+        <section className="py-20 md:py-24 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 max-w-4xl mx-auto">
+            <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
               <h2 className="mb-6">Escolha sua forma de estudar</h2>
               <p className="text-xl md:text-2xl text-foreground font-light mb-4">
                 Três formas de estudar música com direção: por repertório, por trilha prática ou por experiência completa.
@@ -211,7 +211,7 @@ function HomePage() {
                     <p className="text-muted-foreground font-light mb-6">{prod.desc}</p>
                   )}
                   
-                  <ul className={`space-y-3 mb-8 flex-grow ${!prod.desc ? 'mt-4' : ''}`}>
+                  <ul className={`space-y-3 mb-8 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
                     {prod.features.map((feat, j) => (
                       <li key={j} className="flex items-start text-sm text-foreground/80">
                         <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -239,9 +239,14 @@ function HomePage() {
         </section>
 
         {/* SECTION 5: FINAL CTA */}
-        <section className="py-40 px-6 bg-background border-t border-border text-center">
-          <div className="max-w-3xl mx-auto space-y-10">
-            <h2 className="text-5xl md:text-7xl">Sua vez de tocar.</h2>
+        <section className="py-24 md:py-28 px-6 bg-background border-t border-border text-center">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-4xl md:text-6xl">Sua vez de tocar.</h2>
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-4 md:py-5 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
+              <Link to="/produtos">
+                Ver materiais
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
