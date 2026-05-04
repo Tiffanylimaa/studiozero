@@ -68,20 +68,20 @@ function ViolaoPage() {
 
       <main className="py-10 md:py-14 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
             {products.map((prod, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#111111] border border-border p-5 md:p-6 flex flex-col h-full hover:border-[#E8202A]/50 transition-colors group"
+                className="bg-[#111111] border border-border p-5 md:p-6 flex flex-col hover:border-[#E8202A]/50 transition-colors group"
               >
-                <h3 className="text-xl md:text-2xl font-syne font-bold text-white uppercase mb-6 group-hover:text-[#E8202A] transition-colors">
+                <h3 className="text-xl md:text-2xl font-syne font-bold text-white uppercase mb-4 group-hover:text-[#E8202A] transition-colors">
                   {prod.title}
                 </h3>
 
-                <ul className="space-y-2.5 mb-6 flex-grow">
+                <ul className="space-y-2.5 mb-5">
                   {prod.features.map((feat, j) => (
                     <li key={j} className="flex items-start text-sm text-foreground/80">
                       <Check className="w-5 h-5 text-[#E8202A] mr-3 shrink-0" />
@@ -91,17 +91,17 @@ function ViolaoPage() {
                 </ul>
 
                 <div className="mt-auto">
-                  <div className="text-3xl font-syne font-bold text-white mb-6">
+                  <div className="text-3xl font-syne font-bold text-white mb-5">
                     {prod.price}
                   </div>
                   {productDetailsPaths[i] ? (
-                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
+                    <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       <Link to={productDetailsPaths[i]}>
                         Conhecer este material
                       </Link>
                     </Button>
                   ) : (
-                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
+                    <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
                       Comprar em breve
                     </Button>
                   )}

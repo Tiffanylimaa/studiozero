@@ -188,15 +188,15 @@ function AcessoMaterialPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
               {repurchaseCards.map((card) => (
-                <article key={card.title} className="bg-card border border-border p-5 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <article key={card.title} className="bg-card border border-border p-5 flex flex-col hover:border-primary/50 transition-colors">
                   <ArrowRight className="w-5 h-5 text-primary mb-4" />
                   <h3 className="text-2xl mb-3">{card.title}</h3>
-                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-5 flex-grow">
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-5">
                     {card.description}
                   </p>
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
                     <Link to="/produtos">
                       {card.cta}
                     </Link>

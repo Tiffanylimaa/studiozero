@@ -66,22 +66,22 @@ function BaixoPage() {
         description="Groove e ritmo. O alicerce que faz a música dançar." 
       />
 
-      <main className="flex-grow py-10 md:py-14 px-6">
+      <main className="py-10 md:py-14 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start">
             {products.map((product, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card border border-border p-5 md:p-6 flex flex-col h-full hover:border-primary/50 transition-colors group"
+                className="bg-card border border-border p-5 md:p-6 flex flex-col hover:border-primary/50 transition-colors group"
               >
-                <h2 className="text-xl md:text-2xl font-syne font-bold uppercase mb-6 group-hover:text-primary transition-colors">
+                <h2 className="text-xl md:text-2xl font-syne font-bold uppercase mb-4 group-hover:text-primary transition-colors">
                   {product.title}
                 </h2>
                 
-                <ul className="space-y-2.5 mb-6 flex-grow">
+                <ul className="space-y-2.5 mb-5">
                   {product.features.map((feat, j) => (
                     <li key={j} className="flex items-start text-sm text-foreground/80">
                       <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -91,17 +91,17 @@ function BaixoPage() {
                 </ul>
 
                 <div className="mt-auto">
-                  <div className="text-3xl font-syne font-bold mb-6 text-white">
+                  <div className="text-3xl font-syne font-bold mb-5 text-white">
                     {product.price}
                   </div>
                   {productDetailsPaths[index] ? (
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
                       <Link to={productDetailsPaths[index]}>
                         Conhecer este material
                       </Link>
                     </Button>
                   ) : (
-                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
+                    <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
                       Comprar em breve
                     </Button>
                   )}
