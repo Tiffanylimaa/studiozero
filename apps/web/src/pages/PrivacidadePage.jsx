@@ -10,7 +10,7 @@ function PrivacidadePage() {
         <title>Termos de Uso e Privacidade | Studio Zero</title>
         <meta
           name="description"
-          content="Termos de uso e política de privacidade do Studio Zero para produtos digitais de música vendidos pela Kiwify."
+          content="Termos de uso e política de privacidade do Studio Zero para produtos digitais de música vendidos pela Lowify."
         />
       </Helmet>
 
@@ -29,7 +29,7 @@ function PrivacidadePage() {
 
             <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl leading-relaxed">
               Esta página explica, de forma simples e direta, como funcionam o uso do site,
-              a compra dos produtos digitais pela Kiwify e o tratamento de informações pessoais.
+              a compra dos produtos digitais pela Lowify e o tratamento de informações pessoais.
             </p>
           </div>
         </section>
@@ -54,7 +54,7 @@ function PrivacidadePage() {
                 </p>
 
                 <p>
-                  As compras são realizadas em checkout externo da Kiwify. Ao clicar em um botão
+                  As compras são realizadas em checkout externo da Lowify. Ao clicar em um botão
                   de compra, você será direcionado para o ambiente da plataforma, onde pagamento,
                   confirmação do pedido e liberação de acesso podem ser processados.
                 </p>
@@ -66,8 +66,8 @@ function PrivacidadePage() {
                 </p>
 
                 <p>
-                  Após a compra, o acesso ao produto será enviado pela Kiwify para o e-mail usado
-                  no pedido ou disponibilizado conforme as instruções da página de venda.
+                  Após a compra, o acesso ao produto será enviado pela Lowify para o e-mail e WhatsApp
+                  informados no pedido ou disponibilizado conforme as instruções da página de venda.
                 </p>
 
                 <p>
@@ -103,7 +103,7 @@ function PrivacidadePage() {
 
                 <p>
                   As informações de pagamento são processadas por plataformas externas, como a
-                  Kiwify, gateways de pagamento, plataformas de checkout ou sistemas de entrega
+                  Lowify, gateways de pagamento, plataformas de checkout ou sistemas de entrega
                   digital. O Studio Zero não armazena dados completos de cartão de crédito.
                 </p>
 
@@ -135,7 +135,7 @@ function PrivacidadePage() {
               <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
                 <p>
                   Os produtos digitais são entregues conforme as instruções da página de venda ou
-                  da Kiwify, plataforma utilizada para venda e entrega dos materiais.
+                  da Lowify, plataforma utilizada para venda e entrega dos materiais.
                 </p>
 
                 <p>
@@ -145,7 +145,7 @@ function PrivacidadePage() {
 
                 <p>
                   As condições de reembolso, quando aplicáveis, seguirão as regras informadas na
-                  página de venda, na Kiwify ou na legislação vigente.
+                  página de venda, na Lowify ou na legislação vigente.
                 </p>
               </div>
             </div>
