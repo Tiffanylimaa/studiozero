@@ -66,7 +66,7 @@ function ViolaoPage() {
         description="Simplicidade e beleza. O caminho clássico para expressar suas emoções." 
       />
 
-      <main className="py-16 md:py-20 px-6">
+      <main className="py-10 md:py-14 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map((prod, i) => (
@@ -75,13 +75,13 @@ function ViolaoPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#111111] border border-border p-6 md:p-8 flex flex-col h-full hover:border-[#E8202A]/50 transition-colors group"
+                className="bg-[#111111] border border-border p-5 md:p-6 flex flex-col h-full hover:border-[#E8202A]/50 transition-colors group"
               >
                 <h3 className="text-xl md:text-2xl font-syne font-bold text-white uppercase mb-6 group-hover:text-[#E8202A] transition-colors">
                   {prod.title}
                 </h3>
 
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-2.5 mb-6 flex-grow">
                   {prod.features.map((feat, j) => (
                     <li key={j} className="flex items-start text-sm text-foreground/80">
                       <Check className="w-5 h-5 text-[#E8202A] mr-3 shrink-0" />

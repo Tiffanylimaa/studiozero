@@ -16,32 +16,32 @@ function PrivacidadePage() {
 
       <Header />
 
-      <main className="pt-24 md:pt-28">
-        <section className="px-6 py-12 md:py-14 border-b border-border">
+      <main className="pt-20 md:pt-24">
+        <section className="px-6 py-10 md:py-12 border-b border-border">
           <div className="max-w-4xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-sm mb-4">
               Studio Zero
             </p>
 
-            <h1 className="text-5xl md:text-7xl mb-6 leading-none">
+            <h1 className="text-4xl md:text-6xl mb-5 leading-none">
               Termos de Uso<br />e Privacidade
             </h1>
 
-            <p className="text-muted-foreground text-lg md:text-xl font-light max-w-3xl leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg font-light max-w-3xl leading-relaxed">
               Esta página explica, de forma simples e direta, como funcionam o uso do site,
               a compra dos produtos digitais pela Lowify e o tratamento de informações pessoais.
             </p>
           </div>
         </section>
 
-        <section className="px-6 py-12 md:py-14">
-          <div className="max-w-4xl mx-auto bg-card border border-border p-6 md:p-10 space-y-8 md:space-y-10">
+        <section className="px-6 py-10 md:py-12">
+          <div className="max-w-4xl mx-auto bg-card border border-border p-5 md:p-8 space-y-7 md:space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl text-primary mb-6">
+              <h2 className="text-2xl md:text-3xl text-primary mb-5">
                 Termos de Uso
               </h2>
 
-              <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
+              <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
                 <p>
                   Ao acessar este site, você concorda com estes Termos de Uso. Caso não concorde
                   com alguma condição, recomendamos que não utilize o site ou os produtos oferecidos.
@@ -83,12 +83,12 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-10 md:pt-12">
-              <h2 className="text-3xl md:text-4xl text-primary mb-6">
+            <div className="border-t border-border pt-8 md:pt-10">
+              <h2 className="text-2xl md:text-3xl text-primary mb-5">
                 Política de Privacidade
               </h2>
 
-              <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
+              <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
                 <p>
                   A sua privacidade é importante. Coletamos apenas as informações necessárias para
                   viabilizar o contato, a compra, a entrega dos produtos digitais e a melhoria da
@@ -127,12 +127,12 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-10 md:pt-12">
-              <h2 className="text-3xl md:text-4xl text-primary mb-6">
+            <div className="border-t border-border pt-8 md:pt-10">
+              <h2 className="text-2xl md:text-3xl text-primary mb-5">
                 Compras, Acesso e Suporte
               </h2>
 
-              <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
+              <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
                 <p>
                   Os produtos digitais são entregues conforme as instruções da página de venda ou
                   da Lowify, plataforma utilizada para venda e entrega dos materiais.
@@ -150,8 +150,8 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-10 md:pt-12">
-              <h2 className="text-3xl md:text-4xl text-primary mb-6">
+            <div className="border-t border-border pt-8 md:pt-10">
+              <h2 className="text-2xl md:text-3xl text-primary mb-5">
                 Atualizações desta página
               </h2>
 

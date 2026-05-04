@@ -68,28 +68,28 @@ function AcessoMaterialPage() {
 
       <Header />
 
-      <main className="pt-24 md:pt-28">
-        <section className="relative overflow-hidden border-b border-border px-6 py-12 md:py-16">
+      <main className="pt-20 md:pt-24">
+        <section className="relative overflow-hidden border-b border-border px-6 py-10 md:py-14">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,32,42,0.18),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(34,96,204,0.1),transparent_34%)] pointer-events-none" />
-          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-8 xl:gap-10 lg:items-end">
+          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-6 md:gap-8 lg:items-end">
             <div className="min-w-0">
               <p className="text-primary font-syne uppercase tracking-widest text-sm mb-4">
                 Acesso ao material
               </p>
-              <h1 className="font-syne font-bold text-[clamp(2.8rem,5.5vw,4.7rem)] leading-[0.94] tracking-normal mb-5 max-w-[680px]">
+              <h1 className="font-syne font-bold text-[clamp(2.45rem,5vw,4.2rem)] leading-[0.94] tracking-normal mb-4 max-w-[680px]">
                 <span className="block">Compra</span>
                 <span className="block">confirmada.</span>
               </h1>
-              <p className="font-syne font-bold uppercase text-primary text-[clamp(1.25rem,2.7vw,1.95rem)] leading-[1.08] tracking-normal max-w-[720px]">
+              <p className="font-syne font-bold uppercase text-primary text-[clamp(1.1rem,2.4vw,1.75rem)] leading-[1.08] tracking-normal max-w-[720px]">
                 Seu material já foi enviado por e-mail e WhatsApp!
               </p>
             </div>
 
-            <div className="min-w-0 bg-card border border-border p-5 md:p-6">
-              <div className="w-12 h-12 border border-primary/40 bg-primary/10 flex items-center justify-center text-primary mb-5">
+            <div className="min-w-0 bg-card border border-border p-5">
+              <div className="w-11 h-11 border border-primary/40 bg-primary/10 flex items-center justify-center text-primary mb-4">
                 <Inbox className="w-7 h-7" />
               </div>
-              <h2 className="text-2xl md:text-3xl mb-3">Confira seus canais de entrega</h2>
+              <h2 className="text-xl md:text-2xl mb-3">Confira seus canais de entrega</h2>
               <p className="text-muted-foreground font-light leading-relaxed mb-5">
                 Use o mesmo e-mail e WhatsApp cadastrados na compra para localizar a mensagem enviada pelo Lowify.
               </p>
@@ -107,18 +107,18 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 py-12 md:py-14">
+        <section className="px-6 py-10 md:py-12">
           <div className="max-w-6xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
               Como funciona o acesso
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {accessSteps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <article key={step.title} className="bg-card border border-border p-5 md:p-6">
-                    <div className="flex items-center justify-between gap-4 mb-5">
-                      <span className="font-syne text-5xl font-bold text-muted-foreground/20">
+                  <article key={step.title} className="bg-card border border-border p-5">
+                    <div className="flex items-center justify-between gap-4 mb-4">
+                      <span className="font-syne text-4xl font-bold text-muted-foreground/20">
                         0{index + 1}
                       </span>
                       <div className="w-12 h-12 border border-primary/40 bg-primary/10 flex items-center justify-center text-primary">
@@ -136,12 +136,12 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 pb-12 md:pb-14">
-          <div className="max-w-6xl mx-auto border border-primary/35 bg-primary/10 p-5 md:p-6">
+        <section className="px-6 pb-10 md:pb-12">
+          <div className="max-w-6xl mx-auto border border-primary/35 bg-primary/10 p-5">
             <div className="flex flex-col md:flex-row gap-5 md:items-start">
               <CheckCircle2 className="w-7 h-7 text-primary shrink-0" />
               <div>
-                <h2 className="text-2xl md:text-3xl mb-4">Salve seu link de acesso</h2>
+                <h2 className="text-2xl md:text-3xl mb-3">Salve seu link de acesso</h2>
                 <p className="text-foreground/90 font-light leading-relaxed mb-3">
                   Recomendamos que você salve o link recebido para consultar seus arquivos sempre que precisar.
                 </p>
@@ -153,14 +153,14 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 pb-14 md:pb-16">
-          <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-5 md:p-6">
+        <section className="px-6 pb-10 md:pb-12">
+          <div className="max-w-6xl mx-auto bg-section-contrast border border-border p-5">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
               Não encontrou seu material?
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-5 lg:items-center">
               <div>
-                <h2 className="text-3xl md:text-5xl mb-4">A gente te ajuda a localizar.</h2>
+                <h2 className="text-3xl md:text-4xl mb-3">A gente te ajuda a localizar.</h2>
                 <p className="text-muted-foreground font-light leading-relaxed max-w-3xl">
                   Se o link não chegou em alguns minutos, confira sua caixa de spam, aba promoções
                   e mensagens recentes no WhatsApp. Se ainda assim não encontrar, fale com o suporte.
@@ -175,14 +175,14 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 py-14 md:py-16 border-y border-border">
+        <section className="px-6 py-10 md:py-12 border-y border-border">
           <div className="max-w-6xl mx-auto">
-            <div className="max-w-4xl mb-8 md:mb-10">
+            <div className="max-w-4xl mb-6 md:mb-8">
               <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
                 Continue sua evolução musical
               </p>
-              <h2 className="text-4xl md:text-6xl mb-4">Quer continuar estudando com mais direção?</h2>
-              <p className="text-muted-foreground text-lg font-light leading-relaxed">
+              <h2 className="text-3xl md:text-5xl mb-3">Quer continuar estudando com mais direção?</h2>
+              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
                 O Studio Zero possui outras trilhas, repertórios e experiências completas para
                 diferentes instrumentos e objetivos de prática.
               </p>
@@ -190,10 +190,10 @@ function AcessoMaterialPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {repurchaseCards.map((card) => (
-                <article key={card.title} className="bg-card border border-border p-5 md:p-6 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <article key={card.title} className="bg-card border border-border p-5 flex flex-col h-full hover:border-primary/50 transition-colors">
                   <ArrowRight className="w-5 h-5 text-primary mb-4" />
                   <h3 className="text-2xl mb-3">{card.title}</h3>
-                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6 flex-grow">
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mb-5 flex-grow">
                     {card.description}
                   </p>
                   <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
@@ -207,14 +207,14 @@ function AcessoMaterialPage() {
           </div>
         </section>
 
-        <section className="px-6 py-12 md:py-14">
-          <div className="max-w-6xl mx-auto bg-card border border-border p-5 md:p-6">
+        <section className="px-6 py-10 md:py-12">
+          <div className="max-w-6xl mx-auto bg-card border border-border p-5">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
               Acompanhe o Studio Zero
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-6">
               <div>
-                <h2 className="text-3xl md:text-5xl mb-4">Fique por perto.</h2>
+                <h2 className="text-3xl md:text-4xl mb-3">Fique por perto.</h2>
                 <p className="text-muted-foreground font-light leading-relaxed max-w-3xl">
                   Receba novidades, ideias de prática e avisos sobre novos materiais acompanhando o Studio Zero.
                 </p>

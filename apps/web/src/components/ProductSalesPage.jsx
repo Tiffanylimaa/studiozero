@@ -69,10 +69,10 @@ function ProductSalesPage({
 
       <Header />
 
-      <main className="pt-20 md:pt-24">
-        <section className="relative overflow-hidden border-b border-border px-5 md:px-6 py-8 md:py-10">
+      <main className="pt-20">
+        <section className="relative overflow-hidden border-b border-border px-5 md:px-6 py-7 md:py-8">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(232,32,42,0.18),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(34,96,204,0.1),transparent_32%)] pointer-events-none" />
-          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-6 lg:items-end">
+          <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-5 lg:items-end">
             <div className="min-w-0">
               <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
                 {instrument} | Studio Zero
@@ -82,7 +82,7 @@ function ProductSalesPage({
                   {positioningLabel}
                 </p>
               )}
-              <h1 className="font-syne font-bold text-[clamp(1.85rem,4vw,3.45rem)] leading-[1.02] tracking-normal mb-4 max-w-4xl">
+              <h1 className="font-syne font-bold text-[clamp(1.75rem,3.7vw,3.15rem)] leading-[1.02] tracking-normal mb-4 max-w-4xl">
                 {title}
               </h1>
               <p className="text-muted-foreground text-sm md:text-base font-light max-w-3xl leading-relaxed mb-5">
@@ -126,7 +126,7 @@ function ProductSalesPage({
           </div>
         </section>
 
-        <section className="px-5 md:px-6 py-8 md:py-10">
+        <section className="px-5 md:px-6 py-6 md:py-8">
           <div className="max-w-6xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-4">
               O que você recebe
@@ -142,7 +142,7 @@ function ProductSalesPage({
           </div>
         </section>
 
-        <section className="px-5 md:px-6 pb-8 md:pb-10">
+        <section className="px-5 md:px-6 pb-6 md:pb-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-4 md:gap-5">
             <div className="bg-section-contrast border border-border p-4 md:p-5">
               <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
@@ -182,7 +182,7 @@ function ProductSalesPage({
         </section>
 
         {bonusItems.length > 0 && (
-          <section className="px-5 md:px-6 pb-8 md:pb-10">
+          <section className="px-5 md:px-6 pb-6 md:pb-8">
             <div className="max-w-6xl mx-auto bg-card border border-border p-4 md:p-5">
               <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
                 {bonusTitle || 'Bônus incluídos'}
@@ -202,7 +202,7 @@ function ProductSalesPage({
         )}
 
         {upgradeLink && (
-          <section className="px-5 md:px-6 pb-8 md:pb-10">
+          <section className="px-5 md:px-6 pb-6 md:pb-8">
             <div className="max-w-4xl mx-auto border border-primary/35 bg-section-contrast p-4 md:p-6 text-center">
               <h2 className="text-xl md:text-2xl mb-3">{upgradeTitle}</h2>
               <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-5">
@@ -217,7 +217,7 @@ function ProductSalesPage({
           </section>
         )}
 
-        <section className="px-5 md:px-6 pb-8 md:pb-10">
+        <section className="px-5 md:px-6 pb-6 md:pb-8">
           <div className="max-w-6xl mx-auto">
             <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
               FAQ
@@ -235,7 +235,7 @@ function ProductSalesPage({
           </div>
         </section>
 
-        <section className="px-5 md:px-6 pb-10 md:pb-12">
+        <section className="px-5 md:px-6 pb-8 md:pb-10">
           <div className="max-w-4xl mx-auto border border-primary/40 bg-primary/10 p-4 md:p-6 text-center">
             <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
               Oferta digital

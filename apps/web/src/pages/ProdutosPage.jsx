@@ -68,8 +68,8 @@ function ProdutosPage() {
 
       <Header />
 
-      <main className="pt-28 md:pt-32 pb-16 md:pb-20">
-        <section className="px-6 mb-12 md:mb-14 text-center">
+      <main className="pt-24 md:pt-28 pb-12 md:pb-14">
+        <section className="px-6 mb-8 md:mb-10 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,14 +83,14 @@ function ProdutosPage() {
         </section>
 
         <section className="px-6 max-w-7xl mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-6">
             {productLines.map((line, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card border ${line.color} p-5 md:p-7 relative overflow-hidden group`}
+                className={`bg-card border ${line.color} p-5 md:p-6 relative overflow-hidden group`}
               >
                 {/* Subtle background glow on hover */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -103,11 +103,11 @@ function ProdutosPage() {
                       </p>
                     )}
                     <h2 className="text-2xl md:text-3xl mb-4">{line.title}</h2>
-                    <p className="text-muted-foreground font-light mb-6 leading-relaxed">
+                    <p className="text-muted-foreground font-light mb-5 leading-relaxed">
                       {line.desc}
                     </p>
 
-                    <ul className="space-y-3 mb-6">
+                    <ul className="space-y-2.5 mb-5">
                       {line.features.map((feat, j) => (
                         <li key={j} className="flex items-start text-sm font-light text-foreground/80">
                           <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -116,7 +116,7 @@ function ProdutosPage() {
                       ))}
                     </ul>
 
-                    <div className="mt-auto pt-5 border-t border-border/50">
+                    <div className="mt-auto pt-4 border-t border-border/50">
                       <div className="text-3xl font-syne font-bold mb-4 text-white">
                         {line.price}
                       </div>
@@ -127,7 +127,7 @@ function ProdutosPage() {
                   </div>
 
                   <div>
-                    <p className="text-primary font-syne uppercase tracking-widest text-xs mb-5">
+                    <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
                       Opções por instrumento
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -135,7 +135,7 @@ function ProdutosPage() {
                         <Link
                           key={`${line.title}-${instrument.path}`}
                           to={instrument.path}
-                          className="border border-border bg-background/60 px-5 py-4 font-syne uppercase tracking-wider text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
+                          className="border border-border bg-background/60 px-4 py-3 font-syne uppercase tracking-wider text-sm text-foreground hover:border-primary hover:text-primary transition-colors"
                         >
                           {instrument.name}
                         </Link>
