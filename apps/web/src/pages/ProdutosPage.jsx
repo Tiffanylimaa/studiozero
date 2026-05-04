@@ -68,8 +68,8 @@ function ProdutosPage() {
 
       <Header />
 
-      <main className="pt-32 pb-20">
-        <section className="px-6 mb-20 text-center">
+      <main className="pt-28 md:pt-32 pb-16 md:pb-20">
+        <section className="px-6 mb-12 md:mb-14 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,19 +83,19 @@ function ProdutosPage() {
         </section>
 
         <section className="px-6 max-w-7xl mx-auto">
-          <div className="space-y-10">
+          <div className="space-y-8">
             {productLines.map((line, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-card border ${line.color} p-6 md:p-8 relative overflow-hidden group`}
+                className={`bg-card border ${line.color} p-5 md:p-7 relative overflow-hidden group`}
               >
                 {/* Subtle background glow on hover */}
                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 md:gap-8">
                   <div className="flex flex-col">
                     {line.label && (
                       <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
@@ -107,7 +107,7 @@ function ProdutosPage() {
                       {line.desc}
                     </p>
 
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-6">
                       {line.features.map((feat, j) => (
                         <li key={j} className="flex items-start text-sm font-light text-foreground/80">
                           <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -116,7 +116,7 @@ function ProdutosPage() {
                       ))}
                     </ul>
 
-                    <div className="mt-auto pt-6 border-t border-border/50">
+                    <div className="mt-auto pt-5 border-t border-border/50">
                       <div className="text-3xl font-syne font-bold mb-4 text-white">
                         {line.price}
                       </div>

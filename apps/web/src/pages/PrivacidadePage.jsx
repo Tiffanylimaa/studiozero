@@ -16,14 +16,14 @@ function PrivacidadePage() {
 
       <Header />
 
-      <main className="pt-28 md:pt-32">
-        <section className="px-6 py-14 md:py-16 border-b border-border">
+      <main className="pt-24 md:pt-28">
+        <section className="px-6 py-12 md:py-14 border-b border-border">
           <div className="max-w-4xl mx-auto">
-            <p className="text-primary font-syne uppercase tracking-widest text-sm mb-6">
+            <p className="text-primary font-syne uppercase tracking-widest text-sm mb-4">
               Studio Zero
             </p>
 
-            <h1 className="text-5xl md:text-7xl mb-8 leading-none">
+            <h1 className="text-5xl md:text-7xl mb-6 leading-none">
               Termos de Uso<br />e Privacidade
             </h1>
 
@@ -34,8 +34,8 @@ function PrivacidadePage() {
           </div>
         </section>
 
-        <section className="px-6 py-14 md:py-16">
-          <div className="max-w-4xl mx-auto bg-card border border-border p-6 md:p-10 space-y-12">
+        <section className="px-6 py-12 md:py-14">
+          <div className="max-w-4xl mx-auto bg-card border border-border p-6 md:p-10 space-y-8 md:space-y-10">
             <div>
               <h2 className="text-3xl md:text-4xl text-primary mb-6">
                 Termos de Uso
@@ -83,7 +83,7 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-14">
+            <div className="border-t border-border pt-10 md:pt-12">
               <h2 className="text-3xl md:text-4xl text-primary mb-6">
                 Política de Privacidade
               </h2>
@@ -127,7 +127,7 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-14">
+            <div className="border-t border-border pt-10 md:pt-12">
               <h2 className="text-3xl md:text-4xl text-primary mb-6">
                 Compras, Acesso e Suporte
               </h2>
@@ -150,7 +150,7 @@ function PrivacidadePage() {
               </div>
             </div>
 
-            <div className="border-t border-border pt-14">
+            <div className="border-t border-border pt-10 md:pt-12">
               <h2 className="text-3xl md:text-4xl text-primary mb-6">
                 Atualizações desta página
               </h2>
