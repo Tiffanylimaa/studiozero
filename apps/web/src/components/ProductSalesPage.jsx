@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Mail, MessageCircle, ShieldCheck } from 'luci
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { Button } from '@/components/ui/button';
+import { trackCheckoutClick } from '@/lib/tracking.js';
 
 const accessSteps = [
   {
@@ -20,10 +21,15 @@ const accessSteps = [
   },
 ];
 
-function CheckoutButton({ checkoutUrl, children, className = '' }) {
+function CheckoutButton({ productName, checkoutUrl, children, className = '' }) {
   return (
     <Button asChild className={`bg-primary hover:bg-primary/90 text-white rounded-sm px-4 md:px-6 py-3 md:py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight ${className}`}>
-      <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
+      <a
+        href={checkoutUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackCheckoutClick(productName, checkoutUrl)}
+      >
         {children}
       </a>
     </Button>
@@ -66,7 +72,7 @@ function ProductSalesPage({
               <p className="text-muted-foreground text-base md:text-lg font-light max-w-3xl leading-relaxed mb-6">
                 {subtitle}
               </p>
-              <CheckoutButton checkoutUrl={checkoutUrl}>
+              <CheckoutButton productName={productName} checkoutUrl={checkoutUrl}>
                 Quero receber meu material agora
               </CheckoutButton>
               <p className="text-xs md:text-sm text-muted-foreground mt-3 font-light">
@@ -85,7 +91,7 @@ function ProductSalesPage({
                   {price}
                 </p>
               </div>
-              <CheckoutButton checkoutUrl={checkoutUrl} className="w-full">
+              <CheckoutButton productName={productName} checkoutUrl={checkoutUrl} className="w-full">
                 Comprar agora
               </CheckoutButton>
             </aside>
@@ -157,7 +163,7 @@ function ProductSalesPage({
             <p className="font-syne text-4xl md:text-5xl font-bold text-white tracking-normal mb-6">
               {price}
             </p>
-            <CheckoutButton checkoutUrl={checkoutUrl}>
+            <CheckoutButton productName={productName} checkoutUrl={checkoutUrl}>
               Quero receber meu material agora
             </CheckoutButton>
           </div>
@@ -184,7 +190,7 @@ function ProductSalesPage({
         <section className="px-6 pb-14 md:pb-16">
           <div className="max-w-4xl mx-auto border border-primary/40 bg-primary/10 p-5 md:p-7 text-center">
             <h2 className="text-2xl md:text-4xl mb-6">{finalCta}</h2>
-            <CheckoutButton checkoutUrl={checkoutUrl}>
+            <CheckoutButton productName={productName} checkoutUrl={checkoutUrl}>
               Receber material agora
             </CheckoutButton>
           </div>

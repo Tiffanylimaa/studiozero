@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, Route, Routes, BrowserRouter as Router, useLocation } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
+import { initTracking, trackPageView } from '@/lib/tracking.js';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import SobrePage from './pages/SobrePage.jsx';
@@ -38,6 +39,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <TrackingProvider />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/sobre" element={<SobrePage />} />
@@ -73,6 +75,20 @@ function App() {
       <Toaster theme="dark" />
     </Router>
   );
+}
+
+function TrackingProvider() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initTracking();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
+
+  return null;
 }
 
 function NotFound() {
