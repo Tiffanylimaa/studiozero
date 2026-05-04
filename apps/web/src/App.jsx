@@ -17,6 +17,22 @@ import PackViolaoPage from '@/pages/PackViolaoPage.jsx';
 import PackGuitarraPage from '@/pages/PackGuitarraPage.jsx';
 import BootcampViolaoPage from '@/pages/BootcampViolaoPage.jsx';
 import BootcampGuitarraPage from '@/pages/BootcampGuitarraPage.jsx';
+import {
+  BootcampBaixoPage,
+  BootcampBateriaPage,
+  BootcampTecladoPage,
+  BootcampUkulelePage,
+  PackBaixoPage,
+  PackBateriaPage,
+  PackTecladoPage,
+  PackUkulelePage,
+  VipBaixoPage,
+  VipBateriaPage,
+  VipGuitarraPage,
+  VipTecladoPage,
+  VipUkulelePage,
+  VipViolaoPage,
+} from '@/pages/AdditionalProductSalesPages.jsx';
 
 function App() {
   return (
@@ -38,6 +54,20 @@ function App() {
         <Route path="/pack-guitarra" element={<PackGuitarraPage />} />
         <Route path="/bootcamp-violao" element={<BootcampViolaoPage />} />
         <Route path="/bootcamp-guitarra" element={<BootcampGuitarraPage />} />
+        <Route path="/vip-violao" element={<VipViolaoPage />} />
+        <Route path="/vip-guitarra" element={<VipGuitarraPage />} />
+        <Route path="/pack-baixo" element={<PackBaixoPage />} />
+        <Route path="/bootcamp-baixo" element={<BootcampBaixoPage />} />
+        <Route path="/vip-baixo" element={<VipBaixoPage />} />
+        <Route path="/pack-bateria" element={<PackBateriaPage />} />
+        <Route path="/bootcamp-bateria" element={<BootcampBateriaPage />} />
+        <Route path="/vip-bateria" element={<VipBateriaPage />} />
+        <Route path="/pack-teclado" element={<PackTecladoPage />} />
+        <Route path="/bootcamp-teclado" element={<BootcampTecladoPage />} />
+        <Route path="/vip-teclado" element={<VipTecladoPage />} />
+        <Route path="/pack-ukulele" element={<PackUkulelePage />} />
+        <Route path="/bootcamp-ukulele" element={<BootcampUkulelePage />} />
+        <Route path="/vip-ukulele" element={<VipUkulelePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster theme="dark" />
