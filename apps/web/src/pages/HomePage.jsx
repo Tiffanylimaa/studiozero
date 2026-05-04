@@ -109,25 +109,25 @@ function HomePage() {
 
       <main>
         {/* SECTION 1: HERO */}
-        <section className="relative min-h-[72svh] md:min-h-[78svh] flex flex-col items-center justify-center pt-20 pb-10 px-6 overflow-hidden">
+        <section className="relative min-h-[68svh] md:min-h-[72svh] flex flex-col items-center justify-center pt-20 pb-8 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,32,42,0.05)_0%,transparent_70%)] pointer-events-none" />
           
           <motion.div 
             initial={{ opacity: 0, y: 40 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, ease: "easeOut" }} 
-            className="relative z-10 text-center max-w-6xl mx-auto space-y-5 md:space-y-6"
+            className="relative z-10 text-center max-w-6xl mx-auto space-y-4 md:space-y-5"
           >
-            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-4 md:mb-6 h-16 md:h-20 opacity-80 mix-blend-screen">
+            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-4 md:mb-5 h-14 md:h-16 opacity-80 mix-blend-screen">
               {WAVEFORM_BARS.map((bar, i) => {
                 const isRed = i < 19;
                 const opacity = 0.4 + bar.h / 230 * 0.6;
                 const color = isRed ? `rgba(232, 32, 42, ${opacity})` : `rgba(34, 96, 204, ${opacity})`;
-                return <WaveformBar key={i} height={bar.h * 0.43} delay={bar.delay} color={color} />;
+                return <WaveformBar key={i} height={bar.h * 0.35} delay={bar.delay} color={color} />;
               })}
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.8rem] xl:text-[6.5rem] font-syne font-bold leading-[0.95] tracking-tighter uppercase">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.8rem] font-syne font-bold leading-[0.95] tracking-tighter uppercase">
               Música de<br />forma visual.
             </h1>
             
@@ -144,7 +144,7 @@ function HomePage() {
         </section>
 
         {/* SECTION 2: INSTRUMENTS GRID */}
-        <section className="py-12 md:py-16 px-6 bg-background border-t border-border">
+        <section className="py-10 md:py-12 px-6 bg-background border-t border-border">
           <div className="max-w-7xl mx-auto">
             <h2 className="mb-6 md:mb-8 text-center">Escolha seu instrumento</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
@@ -167,20 +167,20 @@ function HomePage() {
         </section>
 
         {/* SECTION 3: METHOD */}
-        <section className="py-12 md:py-16 px-6 bg-section-contrast border-y border-border">
+        <section className="py-10 md:py-12 px-6 bg-section-contrast border-y border-border">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase text-foreground text-center mb-10 md:mb-12">
+            <h2 className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase text-foreground text-center mb-8 md:mb-10">
               O Método Zero
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 relative">
-              <div className="hidden md:block absolute top-5 left-0 w-full h-px bg-border/50" />
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-7 relative">
+              <div className="hidden md:block absolute top-5 left-0 w-full h-px bg-border/40" />
               {steps.map((step, i) => (
                 <div key={i} className="relative z-10 bg-section-contrast pt-0">
-                  <span className="font-syne text-4xl md:text-5xl font-bold text-muted-foreground/20 block mb-4">
+                  <span className="font-syne text-4xl md:text-5xl font-bold text-muted-foreground/20 block mb-3">
                     {step.num}
                   </span>
-                  <h3 className="font-syne text-xl md:text-2xl uppercase tracking-tight text-foreground mb-3">{step.title}</h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{step.desc}</p>
+                  <h3 className="font-syne text-lg md:text-xl uppercase tracking-tight text-foreground mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -188,18 +188,18 @@ function HomePage() {
         </section>
 
         {/* SECTION 4: PRODUCTS */}
-        <section className="py-12 md:py-16 px-6 bg-background">
+        <section className="py-10 md:py-12 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6 md:mb-8 max-w-4xl mx-auto">
+            <div className="text-center mb-6 md:mb-8 max-w-2xl mx-auto">
               <h2 className="mb-4">Escolha sua forma de estudar</h2>
-              <p className="text-xl md:text-2xl text-foreground font-light mb-4">
+              <p className="text-base md:text-lg text-foreground font-light mb-3">
                 Três formas de estudar música com direção: por repertório, por trilha prática ou por experiência completa.
               </p>
               <p className="text-muted-foreground font-light">
                 Cada linha reúne materiais para diferentes instrumentos, níveis de prática e objetivos de estudo.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
               {products.map((prod, i) => (
                 <div key={i} className="bg-card border border-border p-6 md:p-7 flex flex-col h-full hover:border-primary/50 transition-colors">
                   {prod.label && (
@@ -207,13 +207,13 @@ function HomePage() {
                       {prod.label}
                     </p>
                   )}
-                  <h3 className="text-xl md:text-2xl mb-4">{prod.title}</h3>
+                  <h3 className="text-xl md:text-2xl mb-3">{prod.title}</h3>
                   
                   {prod.desc && (
-                    <p className="text-muted-foreground font-light mb-6">{prod.desc}</p>
+                    <p className="text-muted-foreground font-light mb-5">{prod.desc}</p>
                   )}
                   
-                  <ul className={`space-y-2.5 mb-6 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
+                  <ul className={`space-y-2 mb-5 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
                     {prod.features.map((feat, j) => (
                       <li key={j} className="flex items-start text-sm text-foreground/80">
                         <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -222,7 +222,7 @@ function HomePage() {
                     ))}
                   </ul>
 
-                  <div className="mt-auto pt-6 border-t border-border/50">
+                  <div className="mt-auto pt-5 border-t border-border/50">
                     <div className="text-2xl md:text-3xl font-syne font-bold mb-5">{prod.price}</div>
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                       <Link to="/produtos">
@@ -234,14 +234,14 @@ function HomePage() {
               ))}
             </div>
 
-            <p className="text-center text-sm md:text-base text-muted-foreground font-light mt-10 max-w-2xl mx-auto">
+            <p className="text-center text-sm md:text-base text-muted-foreground font-light mt-6 max-w-2xl mx-auto">
               Na próxima etapa, você escolhe o instrumento e o tipo de material ideal para o seu momento.
             </p>
           </div>
         </section>
 
         {/* SECTION 5: FINAL CTA */}
-        <section className="py-12 md:py-14 px-6 bg-background border-t border-border text-center">
+        <section className="py-10 md:py-12 px-6 bg-background border-t border-border text-center">
           <div className="max-w-3xl mx-auto space-y-4">
             <h2 className="text-4xl md:text-5xl">Sua vez de tocar.</h2>
             <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-4 md:py-5 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
