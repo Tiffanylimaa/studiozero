@@ -19,9 +19,10 @@ function ProdutosPage() {
   const productLines = [
     {
       title: "Packs de Repertório",
-      desc: "Materiais visuais e práticos para estudar músicas específicas por instrumento.",
+      desc: "Entrada simples e direta para começar pelo repertório com material visual e prático.",
       price: "A partir de R$ 20,00",
       color: "border-border",
+      label: "Entrada",
       features: [
         'PDFs visuais e práticos',
         'Tablaturas organizadas',
@@ -30,9 +31,10 @@ function ProdutosPage() {
     },
     {
       title: "Bootcamp Zero ao Play",
-      desc: "Trilhas guiadas para sair da teoria solta e seguir um plano de prática com começo, meio e fim.",
+      desc: "Trilha prática de 30 dias para organizar rotina, constância e direção no estudo.",
       price: "A partir de R$ 30,00",
       color: "border-primary",
+      label: "Intermediário",
       features: [
         'Cronograma de 30 dias',
         'Exercícios por etapa',
@@ -41,9 +43,10 @@ function ProdutosPage() {
     },
     {
       title: "Pacote VIP",
-      desc: "Uma experiência mais completa para quem quer estudar com mais direção, repertório e apoio visual.",
+      desc: "Pacote completo com materiais extras e apoio complementar para quem quer o melhor custo-benefício.",
       price: "A partir de R$ 50,00",
       color: "border-secondary",
+      label: "Melhor escolha",
       features: [
         'PDFs com tablaturas e teoria',
         'Curadoria de vídeos educativos',
@@ -75,7 +78,7 @@ function ProdutosPage() {
             Produtos Studio Zero
           </motion.h1>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto">
-            Escolha uma linha de estudo e depois selecione o instrumento que combina com o seu momento.
+            Escolha sua linha de estudo e depois o instrumento que combina com o seu momento.
           </p>
         </section>
 
@@ -94,6 +97,11 @@ function ProdutosPage() {
 
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8">
                   <div className="flex flex-col">
+                    {line.label && (
+                      <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
+                        {line.label}
+                      </p>
+                    )}
                     <h2 className="text-2xl md:text-3xl mb-4">{line.title}</h2>
                     <p className="text-muted-foreground font-light mb-6 leading-relaxed">
                       {line.desc}

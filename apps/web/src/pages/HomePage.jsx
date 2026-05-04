@@ -56,8 +56,9 @@ function HomePage() {
     {
       title: "Packs de Repertório",
       price: "A partir de R$ 20,00",
-      desc: "Materiais visuais e práticos para estudar músicas específicas por instrumento.",
+      desc: "Produto de entrada para começar pelo repertório com material visual, direto e prático.",
       cta: "Ver packs disponíveis",
+      label: "Comece por aqui",
       features: [
         'PDFs visuais e práticos',
         'Tablaturas organizadas',
@@ -68,8 +69,9 @@ function HomePage() {
     {
       title: "Bootcamp Zero ao Play",
       price: "A partir de R$ 30,00",
-      desc: "Trilhas guiadas para sair da teoria solta e seguir um plano de prática com começo, meio e fim.",
+      desc: "Trilha prática de 30 dias para sair da prática aleatória e organizar sua evolução.",
       cta: "Ver bootcamps",
+      label: "Plano de prática",
       features: [
         'Cronograma de 30 dias',
         'Exercícios por etapa',
@@ -80,8 +82,9 @@ function HomePage() {
     {
       title: "Pacote VIP",
       price: "A partir de R$ 50,00",
-      desc: "Uma experiência mais completa para quem quer estudar com mais direção, repertório e apoio visual.",
+      desc: "A experiência mais completa e o melhor custo-benefício para estudar com direção.",
       cta: "Ver pacotes VIP",
+      label: "Melhor escolha",
       features: [
         'PDFs com tablaturas e teoria',
         'Curadoria de vídeos educativos',
@@ -197,6 +200,11 @@ function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {products.map((prod, i) => (
                 <div key={i} className="bg-card border border-border p-6 md:p-8 flex flex-col h-full hover:border-primary/50 transition-colors">
+                  {prod.label && (
+                    <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
+                      {prod.label}
+                    </p>
+                  )}
                   <h3 className="text-xl md:text-2xl mb-4">{prod.title}</h3>
                   
                   {prod.desc && (
