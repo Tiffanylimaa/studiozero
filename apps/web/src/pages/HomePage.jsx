@@ -167,17 +167,20 @@ function HomePage() {
         </section>
 
         {/* SECTION 3: METHOD */}
-        <section className="py-12 md:py-14 px-6 bg-section-contrast border-y border-border">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="mb-6 md:mb-8 text-center">O Método Zero</h2>
+        <section className="py-12 md:py-16 px-6 bg-section-contrast border-y border-border">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-syne text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase text-foreground text-center mb-10 md:mb-12">
+              O Método Zero
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 relative">
+              <div className="hidden md:block absolute top-5 left-0 w-full h-px bg-border/50" />
               {steps.map((step, i) => (
-                <div key={i} className="relative z-10 bg-section-contrast">
-                  <span className="font-syne text-4xl md:text-5xl font-bold text-muted-foreground/30 block mb-2 md:mb-3">
+                <div key={i} className="relative z-10 bg-section-contrast pt-0">
+                  <span className="font-syne text-4xl md:text-5xl font-bold text-muted-foreground/20 block mb-4">
                     {step.num}
                   </span>
-                  <h3 className="text-lg md:text-xl mb-2 text-foreground">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground font-light">{step.desc}</p>
+                  <h3 className="font-syne text-xl md:text-2xl uppercase tracking-tight text-foreground mb-3">{step.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
