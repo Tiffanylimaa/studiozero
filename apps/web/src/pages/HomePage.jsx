@@ -146,7 +146,7 @@ function HomePage() {
         {/* SECTION 2: INSTRUMENTS GRID */}
         <section className="py-10 md:py-12 px-6 bg-background border-t border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-6 md:mb-8 text-center">Escolha seu instrumento</h2>
+            <h2 className="font-syne text-3xl md:text-5xl font-bold uppercase text-center mb-5 md:mb-6">Escolha seu instrumento</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
               {instruments.map((inst, i) => (
                 <motion.div 
@@ -191,7 +191,7 @@ function HomePage() {
         <section className="py-10 md:py-12 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-6 md:mb-8 max-w-2xl mx-auto">
-              <h2 className="mb-4">Escolha sua forma de estudar</h2>
+              <h2 className="font-syne text-3xl md:text-5xl font-bold uppercase mb-3">Escolha sua forma de estudar</h2>
               <p className="text-base md:text-lg text-foreground font-light mb-3">
                 Três formas de estudar música com direção: por repertório, por trilha prática ou por experiência completa.
               </p>
@@ -201,7 +201,7 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
               {products.map((prod, i) => (
-                <div key={i} className="bg-card border border-border p-6 md:p-7 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div key={i} className="bg-card border border-border p-5 md:p-6 flex flex-col hover:border-primary/50 transition-colors">
                   {prod.label && (
                     <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
                       {prod.label}
@@ -213,7 +213,7 @@ function HomePage() {
                     <p className="text-muted-foreground font-light mb-5">{prod.desc}</p>
                   )}
                   
-                  <ul className={`space-y-2 mb-5 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
+                  <ul className={`space-y-2 mb-5 ${!prod.desc ? 'mt-3' : ''}`}>
                     {prod.features.map((feat, j) => (
                       <li key={j} className="flex items-start text-sm text-foreground/80">
                         <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -224,7 +224,7 @@ function HomePage() {
 
                   <div className="mt-auto pt-5 border-t border-border/50">
                     <div className="text-2xl md:text-3xl font-syne font-bold mb-5">{prod.price}</div>
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
                       <Link to="/produtos">
                         {prod.cta}
                       </Link>
