@@ -109,7 +109,7 @@ function HomePage() {
 
       <main>
         {/* SECTION 1: HERO */}
-        <section className="relative min-h-[86svh] md:min-h-[90svh] flex flex-col items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
+        <section className="relative min-h-[84svh] md:min-h-[88svh] flex flex-col items-center justify-center pt-24 pb-10 px-6 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,32,42,0.05)_0%,transparent_70%)] pointer-events-none" />
           
           <motion.div 
@@ -118,12 +118,12 @@ function HomePage() {
             transition={{ duration: 0.8, ease: "easeOut" }} 
             className="relative z-10 text-center max-w-6xl mx-auto space-y-6 md:space-y-8"
           >
-            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-6 md:mb-8 h-20 md:h-28 opacity-80 mix-blend-screen">
+            <div className="flex items-center justify-center gap-1 md:gap-[6px] mb-5 md:mb-6 h-16 md:h-24 opacity-80 mix-blend-screen">
               {WAVEFORM_BARS.map((bar, i) => {
                 const isRed = i < 19;
                 const opacity = 0.4 + bar.h / 230 * 0.6;
                 const color = isRed ? `rgba(232, 32, 42, ${opacity})` : `rgba(34, 96, 204, ${opacity})`;
-                return <WaveformBar key={i} height={bar.h * 0.5} delay={bar.delay} color={color} />;
+                return <WaveformBar key={i} height={bar.h * 0.43} delay={bar.delay} color={color} />;
               })}
             </div>
 
@@ -136,7 +136,7 @@ function HomePage() {
             </p>
 
             <Link to="/produtos" className="inline-block">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-5 md:py-6 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-4 md:py-5 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
                 Ver linhas de estudo
               </Button>
             </Link>
@@ -144,9 +144,9 @@ function HomePage() {
         </section>
 
         {/* SECTION 2: INSTRUMENTS GRID */}
-        <section className="py-20 md:py-24 px-6 bg-background border-t border-border">
+        <section className="py-16 md:py-20 px-6 bg-background border-t border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-10 md:mb-12 text-center">Escolha seu instrumento</h2>
+            <h2 className="mb-8 md:mb-10 text-center">Escolha seu instrumento</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {instruments.map((inst, i) => (
                 <motion.div 
@@ -167,14 +167,14 @@ function HomePage() {
         </section>
 
         {/* SECTION 3: METHOD */}
-        <section className="py-20 md:py-24 px-6 bg-section-contrast border-y border-border">
+        <section className="py-16 md:py-20 px-6 bg-section-contrast border-y border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="mb-12 md:mb-14 text-center">O Método Zero</h2>
+            <h2 className="mb-10 md:mb-12 text-center">O Método Zero</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 relative">
-              <div className="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-border" />
+              <div className="hidden md:block absolute top-8 left-0 w-full h-[1px] bg-border" />
               {steps.map((step, i) => (
-                <div key={i} className="relative z-10 bg-section-contrast pt-4">
-                  <span className="font-syne text-6xl font-bold text-muted-foreground/30 block mb-6">
+                <div key={i} className="relative z-10 bg-section-contrast pt-2">
+                  <span className="font-syne text-5xl md:text-6xl font-bold text-muted-foreground/30 block mb-4">
                     {step.num}
                   </span>
                   <h3 className="text-2xl mb-4 text-foreground">{step.title}</h3>
@@ -186,10 +186,10 @@ function HomePage() {
         </section>
 
         {/* SECTION 4: PRODUCTS */}
-        <section className="py-20 md:py-24 px-6 bg-background">
+        <section className="py-16 md:py-20 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-10 md:mb-12 max-w-4xl mx-auto">
-              <h2 className="mb-6">Escolha sua forma de estudar</h2>
+            <div className="text-center mb-8 md:mb-10 max-w-4xl mx-auto">
+              <h2 className="mb-4">Escolha sua forma de estudar</h2>
               <p className="text-xl md:text-2xl text-foreground font-light mb-4">
                 Três formas de estudar música com direção: por repertório, por trilha prática ou por experiência completa.
               </p>
@@ -199,7 +199,7 @@ function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {products.map((prod, i) => (
-                <div key={i} className="bg-card border border-border p-6 md:p-8 flex flex-col h-full hover:border-primary/50 transition-colors">
+                <div key={i} className="bg-card border border-border p-5 md:p-7 flex flex-col h-full hover:border-primary/50 transition-colors">
                   {prod.label && (
                     <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
                       {prod.label}
@@ -211,7 +211,7 @@ function HomePage() {
                     <p className="text-muted-foreground font-light mb-6">{prod.desc}</p>
                   )}
                   
-                  <ul className={`space-y-3 mb-8 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
+                  <ul className={`space-y-3 mb-6 flex-grow ${!prod.desc ? 'mt-3' : ''}`}>
                     {prod.features.map((feat, j) => (
                       <li key={j} className="flex items-start text-sm text-foreground/80">
                         <Check className="w-5 h-5 text-primary mr-3 shrink-0" />
@@ -221,7 +221,7 @@ function HomePage() {
                   </ul>
 
                   <div className="mt-auto pt-6 border-t border-border/50">
-                    <div className="text-2xl md:text-3xl font-syne font-bold mb-6">{prod.price}</div>
+                    <div className="text-2xl md:text-3xl font-syne font-bold mb-5">{prod.price}</div>
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight">
                       <Link to="/produtos">
                         {prod.cta}
@@ -239,7 +239,7 @@ function HomePage() {
         </section>
 
         {/* SECTION 5: FINAL CTA */}
-        <section className="py-24 md:py-28 px-6 bg-background border-t border-border text-center">
+        <section className="py-16 md:py-20 px-6 bg-background border-t border-border text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-4xl md:text-6xl">Sua vez de tocar.</h2>
             <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-4 md:py-5 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
