@@ -55,6 +55,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://studiozero.io/pack-violao</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studiozero.io/pack-guitarra</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studiozero.io/bootcamp-violao</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://studiozero.io/bootcamp-guitarra</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://studiozero.io/privacidade</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>

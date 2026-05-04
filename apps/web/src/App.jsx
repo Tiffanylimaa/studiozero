@@ -13,6 +13,10 @@ import UkulelePage from './pages/UkulelePage.jsx';
 import PrivacidadePage from '@/pages/PrivacidadePage.jsx';
 import AcessoMaterialPage from '@/pages/AcessoMaterialPage.jsx';
 import ProdutosPage from '@/pages/ProdutosPage.jsx';
+import PackViolaoPage from '@/pages/PackViolaoPage.jsx';
+import PackGuitarraPage from '@/pages/PackGuitarraPage.jsx';
+import BootcampViolaoPage from '@/pages/BootcampViolaoPage.jsx';
+import BootcampGuitarraPage from '@/pages/BootcampGuitarraPage.jsx';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route path="/produtos" element={<ProdutosPage />} />
         <Route path="/privacidade" element={<PrivacidadePage />} />
         <Route path="/acesso-material" element={<AcessoMaterialPage />} />
+        <Route path="/pack-violao" element={<PackViolaoPage />} />
+        <Route path="/pack-guitarra" element={<PackGuitarraPage />} />
+        <Route path="/bootcamp-violao" element={<BootcampViolaoPage />} />
+        <Route path="/bootcamp-guitarra" element={<BootcampGuitarraPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster theme="dark" />
