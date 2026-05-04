@@ -237,7 +237,15 @@ function ProductSalesPage({
 
         <section className="px-5 md:px-6 pb-10 md:pb-12">
           <div className="max-w-4xl mx-auto border border-primary/40 bg-primary/10 p-4 md:p-6 text-center">
-            <h2 className="text-xl md:text-3xl mb-5">{finalCta}</h2>
+            <p className="text-primary font-syne uppercase tracking-widest text-[0.7rem] md:text-xs mb-3">
+              Oferta digital
+            </p>
+            <h2 className="text-xl md:text-3xl mb-3">{finalCta}</h2>
+            <p className="text-sm text-muted-foreground font-light mb-2">{productName}</p>
+            <p className="text-xs text-muted-foreground font-light mb-2">Pagamento único</p>
+            <p className="font-syne text-3xl md:text-4xl font-bold text-white tracking-normal mb-5">
+              {price}
+            </p>
             <CheckoutButton productName={productName} checkoutUrl={checkoutUrl}>
               Receber material agora
             </CheckoutButton>
