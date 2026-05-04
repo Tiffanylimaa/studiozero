@@ -25,6 +25,7 @@ function PackGuitarraPage() {
       subtitle="Um material digital com repertórios organizados, tablaturas e apoio teórico para transformar estudo solto em prática objetiva."
       price="R$ 20,00"
       checkoutUrl="https://pay.lowify.com.br/checkout?product_id=FrPwiN"
+      positioningLabel="Comece por aqui."
       whatYouGet={[
         'PDFs visuais e práticos',
         'Repertórios organizados',
@@ -38,6 +39,9 @@ function PackGuitarraPage() {
       ]}
       faq={faq}
       finalCta="Comece hoje a estudar guitarra com mais direção."
+      upgradeTitle="Quer uma experiência mais completa?"
+      upgradeText="Se você quer ir além do material inicial e estudar com mais direção, veja também o Pacote VIP do mesmo instrumento, que reúne cronograma, guias e materiais complementares."
+      upgradeLink="/vip-guitarra"
     />
   );
 }

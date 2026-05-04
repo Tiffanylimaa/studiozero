@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Mail, MessageCircle, ShieldCheck } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -47,6 +48,14 @@ function ProductSalesPage({
   idealFor,
   faq,
   finalCta,
+  positioningLabel,
+  badgeLabel,
+  priceNote,
+  bonusTitle,
+  bonusItems = [],
+  upgradeTitle,
+  upgradeText,
+  upgradeLink,
 }) {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
@@ -66,6 +75,11 @@ function ProductSalesPage({
               <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
                 {instrument} | Studio Zero
               </p>
+              {positioningLabel && (
+                <p className="inline-flex border border-primary/40 bg-primary/10 px-3 py-2 text-primary font-syne uppercase tracking-widest text-xs mb-5">
+                  {positioningLabel}
+                </p>
+              )}
               <h1 className="font-syne font-bold text-[clamp(2.1rem,4.7vw,4.15rem)] leading-[1] tracking-normal mb-5 max-w-4xl">
                 {title}
               </h1>
@@ -81,15 +95,27 @@ function ProductSalesPage({
             </div>
 
             <aside className="bg-card border border-border p-5 md:p-6">
-              <p className="text-primary font-syne uppercase tracking-widest text-xs mb-3">
-                Oferta digital
-              </p>
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <p className="text-primary font-syne uppercase tracking-widest text-xs">
+                  Oferta digital
+                </p>
+                {badgeLabel && (
+                  <span className="bg-primary text-white px-3 py-1 font-syne uppercase tracking-widest text-[0.68rem]">
+                    {badgeLabel}
+                  </span>
+                )}
+              </div>
               <h2 className="text-xl md:text-2xl mb-5">{productName}</h2>
               <div className="border-y border-border py-5 mb-5">
                 <p className="text-sm text-muted-foreground font-light mb-2">Pagamento único</p>
                 <p className="font-syne text-3xl md:text-4xl font-bold text-white tracking-normal">
                   {price}
                 </p>
+                {priceNote && (
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed mt-3">
+                    {priceNote}
+                  </p>
+                )}
               </div>
               <CheckoutButton productName={productName} checkoutUrl={checkoutUrl} className="w-full">
                 Comprar agora
@@ -153,6 +179,26 @@ function ProductSalesPage({
           </div>
         </section>
 
+        {bonusItems.length > 0 && (
+          <section className="px-6 pb-10 md:pb-12">
+            <div className="max-w-6xl mx-auto bg-card border border-border p-5 md:p-6">
+              <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
+                {bonusTitle || 'Bônus incluídos'}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {bonusItems.map((item) => (
+                  <div key={item} className="flex gap-3 border border-border bg-background/60 p-4">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <p className="text-sm md:text-base text-foreground/90 font-light leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="px-6 pb-10 md:pb-12">
           <div className="max-w-5xl mx-auto bg-card border border-border p-5 md:p-7 text-center">
             <p className="text-primary font-syne uppercase tracking-widest text-xs mb-4">
@@ -163,11 +209,32 @@ function ProductSalesPage({
             <p className="font-syne text-4xl md:text-5xl font-bold text-white tracking-normal mb-6">
               {price}
             </p>
+            {priceNote && (
+              <p className="text-sm md:text-base text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-6">
+                {priceNote}
+              </p>
+            )}
             <CheckoutButton productName={productName} checkoutUrl={checkoutUrl}>
               Quero receber meu material agora
             </CheckoutButton>
           </div>
         </section>
+
+        {upgradeLink && (
+          <section className="px-6 pb-10 md:pb-12">
+            <div className="max-w-4xl mx-auto border border-primary/35 bg-section-contrast p-5 md:p-7 text-center">
+              <h2 className="text-2xl md:text-3xl mb-4">{upgradeTitle}</h2>
+              <p className="text-sm md:text-base text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-6">
+                {upgradeText}
+              </p>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-4 md:px-6 py-3 md:py-4 min-h-[2.75rem] font-syne uppercase tracking-wider text-sm whitespace-normal text-center leading-tight">
+                <Link to={upgradeLink}>
+                  Ver Pacote VIP
+                </Link>
+              </Button>
+            </div>
+          </section>
+        )}
 
         <section className="px-6 pb-10 md:pb-12">
           <div className="max-w-6xl mx-auto">

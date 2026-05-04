@@ -25,6 +25,7 @@ function BootcampGuitarraPage() {
       subtitle="Um bootcamp digital para sair da prática aleatória e seguir um caminho de estudo com começo, meio e fim."
       price="R$ 30,00"
       checkoutUrl="https://pay.lowify.com.br/checkout?product_id=4Fpbw7"
+      positioningLabel="Organize sua prática em 30 dias."
       whatYouGet={[
         'Cronograma de 30 dias',
         'Exercícios por etapa',
@@ -38,6 +39,14 @@ function BootcampGuitarraPage() {
       ]}
       faq={faq}
       finalCta="Comece hoje sua trilha de estudo na guitarra."
+      bonusTitle="Bônus incluídos"
+      bonusItems={[
+        'Curadoria de vídeos educativos',
+        'Dicionário visual / apoio complementar',
+      ]}
+      upgradeTitle="Quer também os guias e materiais complementares?"
+      upgradeText="O Pacote VIP reúne a trilha de estudo com materiais extras para quem quer uma experiência mais completa no instrumento."
+      upgradeLink="/vip-guitarra"
     />
   );
 }

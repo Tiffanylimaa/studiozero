@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import InstrumentHero from '@/components/InstrumentHero.jsx';
 import { Button } from '@/components/ui/button';
-import { trackCheckoutClick } from '@/lib/tracking.js';
 
 function GuitarraPage() {
   const products = [
@@ -46,6 +46,8 @@ function GuitarraPage() {
       ]
     }
   ];
+
+  const productDetailsPaths = ['/pack-guitarra', '/bootcamp-guitarra', '/vip-guitarra'];
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
@@ -92,16 +94,11 @@ function GuitarraPage() {
                   <div className="text-3xl font-syne font-bold mb-6 text-white">
                     {product.price}
                   </div>
-                  {product.checkoutUrl ? (
+                  {productDetailsPaths[index] ? (
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">
-                      <a
-                        href={product.checkoutUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => trackCheckoutClick(product.title, product.checkoutUrl)}
-                      >
-                        Comprar agora
-                      </a>
+                      <Link to={productDetailsPaths[index]}>
+                        Conhecer este material
+                      </Link>
                     </Button>
                   ) : (
                     <Button disabled className="w-full bg-primary hover:bg-primary/90 text-white rounded-none px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-all active:scale-[0.98]">

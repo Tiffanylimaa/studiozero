@@ -38,7 +38,18 @@ const vipWhatYouGet = [
   'Materiais complementares',
 ];
 
+const slugByInstrument = {
+  Baixo: 'baixo',
+  Bateria: 'bateria',
+  Guitarra: 'guitarra',
+  Teclado: 'teclado',
+  Ukulele: 'ukulele',
+  Violão: 'violao',
+};
+
 function makePackProps(instrument, checkoutUrl, article) {
+  const slug = slugByInstrument[instrument];
+
   return {
     productName: `Pack de Repertório | ${instrument}`,
     instrument,
@@ -54,10 +65,19 @@ function makePackProps(instrument, checkoutUrl, article) {
     ],
     faq,
     finalCta: `Comece hoje a estudar ${instrument.toLowerCase()} com mais direção.`,
+    positioningLabel: 'Comece por aqui.',
+    upgradeTitle: 'Quer uma experiência mais completa?',
+    upgradeText: 'Se você quer ir além do material inicial e estudar com mais direção, veja também o Pacote VIP do mesmo instrumento, que reúne cronograma, guias e materiais complementares.',
+    upgradeLink: `/vip-${slug}`,
   };
 }
 
 function makeBootcampProps(instrument, checkoutUrl, article) {
+  const slug = slugByInstrument[instrument];
+  const bonusItems = instrument === 'Bateria'
+    ? ['Curadoria de vídeos educativos', 'Material de apoio para organizar sua prática']
+    : ['Curadoria de vídeos educativos', 'Dicionário visual / apoio complementar'];
+
   return {
     productName: `Bootcamp Zero ao Play | ${instrument}`,
     instrument,
@@ -73,15 +93,38 @@ function makeBootcampProps(instrument, checkoutUrl, article) {
     ],
     faq,
     finalCta: `Comece hoje sua trilha de estudo ${article} ${instrument.toLowerCase()}.`,
+    positioningLabel: 'Organize sua prática em 30 dias.',
+    bonusTitle: 'Bônus incluídos',
+    bonusItems,
+    upgradeTitle: 'Quer também os guias e materiais complementares?',
+    upgradeText: 'O Pacote VIP reúne a trilha de estudo com materiais extras para quem quer uma experiência mais completa no instrumento.',
+    upgradeLink: `/vip-${slug}`,
   };
 }
 
 function makeVipProps(instrument, checkoutUrl, article) {
+  const bonusItems = instrument === 'Bateria'
+    ? [
+      'Guia de Equipamentos',
+      'Guia para Iniciantes',
+      'Curadoria de vídeos educativos',
+      'Cronograma de 30 dias',
+      'Materiais complementares de apoio',
+    ]
+    : [
+      'Guia de Equipamentos',
+      'Guia para Iniciantes',
+      'Curadoria de vídeos educativos',
+      'Cronograma de 30 dias',
+      'Materiais complementares de apoio',
+      'Dicionário visual / apoio complementar',
+    ];
+
   return {
     productName: `Pacote VIP | ${instrument}`,
     instrument,
     title: `Tenha uma experiência completa para estudar ${instrument.toLowerCase()} com mais direção.`,
-    subtitle: 'Um pacote digital com repertórios, teoria aplicada, curadoria de apoio e cronograma para organizar sua prática musical.',
+    subtitle: 'Um pacote completo com repertórios, teoria aplicada, curadoria de apoio e cronograma para organizar sua prática musical com melhor custo-benefício.',
     price: 'R$ 50,00',
     checkoutUrl,
     whatYouGet: vipWhatYouGet,
@@ -92,6 +135,11 @@ function makeVipProps(instrument, checkoutUrl, article) {
     ],
     faq,
     finalCta: `Comece hoje uma experiência mais completa ${article} ${instrument.toLowerCase()}.`,
+    positioningLabel: 'Leve a experiência mais completa.',
+    badgeLabel: 'Melhor escolha',
+    priceNote: 'A opção mais completa do Studio Zero para estudar com direção.',
+    bonusTitle: 'Bônus incluídos no Pacote VIP',
+    bonusItems,
   };
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import InstrumentHero from '@/components/InstrumentHero.jsx';
 import { Button } from '@/components/ui/button';
-import { trackCheckoutClick } from '@/lib/tracking.js';
 
 function ViolaoPage() {
   const products = [
@@ -46,6 +46,8 @@ function ViolaoPage() {
       ]
     }
   ];
+
+  const productDetailsPaths = ['/pack-violao', '/bootcamp-violao', '/vip-violao'];
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
@@ -92,16 +94,11 @@ function ViolaoPage() {
                   <div className="text-3xl font-syne font-bold text-white mb-6">
                     {prod.price}
                   </div>
-                  {prod.checkoutUrl ? (
+                  {productDetailsPaths[i] ? (
                     <Button asChild className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
-                      <a
-                        href={prod.checkoutUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => trackCheckoutClick(prod.title, prod.checkoutUrl)}
-                      >
-                        Comprar agora
-                      </a>
+                      <Link to={productDetailsPaths[i]}>
+                        Conhecer este material
+                      </Link>
                     </Button>
                   ) : (
                     <Button disabled className="w-full bg-[#FF0000] hover:bg-[#FF0000]/90 text-white rounded-sm px-4 py-4 min-h-[3.1rem] font-syne uppercase tracking-wider text-sm md:text-base whitespace-normal text-center leading-tight transition-transform active:scale-[0.98]">
