@@ -98,10 +98,24 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white">
       <Helmet>
-        <title>Studio Zero | Do zero ao play</title>
+        <title>Studio Zero | Música de forma visual</title>
         <meta
           name="description"
-          content="Materiais digitais de música para estudar por repertório, trilha prática ou experiência completa no Studio Zero."
+          content="Materiais digitais para estudar violão, guitarra, baixo, bateria, teclado e ukulele com mais direção. Packs, bootcamps e pacotes VIP para organizar sua prática musical."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Studio Zero | Música de forma visual" />
+        <meta
+          property="og:description"
+          content="Materiais digitais para estudar instrumentos com mais direção, prática visual e repertórios organizados."
+        />
+        <meta property="og:url" content="https://studiozero.io" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Studio Zero | Música de forma visual" />
+        <meta
+          name="twitter:description"
+          content="Materiais digitais para estudar instrumentos com mais direção, prática visual e repertórios organizados."
         />
       </Helmet>
 
@@ -244,6 +258,9 @@ function HomePage() {
         <section className="py-10 md:py-12 px-6 bg-background border-t border-border text-center">
           <div className="max-w-3xl mx-auto space-y-4">
             <h2 className="text-4xl md:text-5xl">Sua vez de tocar.</h2>
+            <p className="text-sm md:text-base text-muted-foreground font-light">
+              Escolha seu instrumento e encontre o material ideal para estudar com mais direção.
+            </p>
             <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-sm px-6 md:px-8 py-4 md:py-5 font-syne uppercase tracking-widest whitespace-normal text-center leading-tight">
               <Link to="/produtos">
                 Ver materiais

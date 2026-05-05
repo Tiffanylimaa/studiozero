@@ -17,7 +17,7 @@ function Footer() {
           </div>
           
           <div className="space-y-6">
-            <h4 className="font-syne text-lg font-bold text-foreground">Contatos</h4>
+            <h4 className="font-syne text-lg font-bold text-foreground">Contato</h4>
             <div className="space-y-2 text-muted-foreground font-light">
               <a 
                 href="https://www.instagram.com/0studio.zero" 

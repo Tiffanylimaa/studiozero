@@ -63,7 +63,7 @@ function AcessoMaterialPage() {
           name="description"
           content="Orientações de acesso aos materiais digitais do Studio Zero após a compra."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
 
       <Header />
