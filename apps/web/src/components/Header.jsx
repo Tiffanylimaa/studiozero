@@ -43,11 +43,11 @@ function Header() {
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+      <nav className="max-w-7xl mx-auto px-5 lg:px-8">
+        <div className="flex h-16 items-center justify-between md:h-[4.5rem]">
 
           <Link to="/" className="flex items-center z-50 group">
-            <span className="font-syne text-3xl font-bold tracking-tighter uppercase text-[#E8E6E1]">
+            <span className="font-syne text-2xl font-bold tracking-tighter uppercase text-[#E8E6E1] md:text-[1.65rem]">
               Studio
               <motion.span 
                 className="inline-block text-[#E8202A]"
@@ -68,12 +68,12 @@ function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="relative text-xs font-bold tracking-widest uppercase transition-colors duration-300 py-2"
+                className="relative py-2 text-[11px] font-bold uppercase tracking-widest transition-colors duration-300"
                 style={{ color: isActive(link.path) ? '#E8202A' : '#8A8A8A' }}
                 onMouseEnter={(e) => { if (!isActive(link.path)) e.target.style.color = '#E8E6E1'; }}
                 onMouseLeave={(e) => { if (!isActive(link.path)) e.target.style.color = '#8A8A8A'; }}
@@ -108,7 +108,7 @@ function Header() {
                   transition={{ duration: 0.2 }}
                   className="block"
                 >
-                  <X size={28} />
+                  <X size={24} />
                 </motion.span>
               ) : (
                 <motion.span 
@@ -119,7 +119,7 @@ function Header() {
                   transition={{ duration: 0.2 }}
                   className="block"
                 >
-                  <Menu size={28} />
+                  <Menu size={24} />
                 </motion.span>
               )}
             </AnimatePresence>
@@ -139,8 +139,8 @@ function Header() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="absolute left-0 right-0 top-full z-40 lg:hidden border-t border-border bg-black/95 backdrop-blur-xl shadow-[0_24px_60px_rgba(0,0,0,0.55)]"
           >
-            <div className="max-h-[calc(100svh-6rem)] overflow-y-auto px-6 py-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="max-h-[calc(100svh-4.5rem)] overflow-y-auto px-5 py-4">
+              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.path}
@@ -152,7 +152,7 @@ function Header() {
                     <Link
                       to={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex min-h-[3.4rem] items-center justify-between border border-border bg-[#0D0D0D] px-5 py-4 font-syne text-base font-bold uppercase tracking-widest transition-colors duration-300 hover:border-[#E8202A] hover:text-[#E8202A]"
+                      className="flex min-h-[3rem] items-center justify-between border border-border bg-[#0D0D0D] px-4 py-3 font-syne text-sm font-bold uppercase tracking-widest transition-colors duration-300 hover:border-[#E8202A] hover:text-[#E8202A]"
                       style={{
                         color: isActive(link.path) ? '#E8202A' : '#E8E6E1',
                         borderColor: isActive(link.path) ? 'rgba(232,32,42,0.65)' : undefined,
