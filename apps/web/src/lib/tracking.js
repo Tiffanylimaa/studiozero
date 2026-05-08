@@ -1,4 +1,4 @@
-const META_PIXEL_ID = '';
+const META_PIXEL_ID = '1405340588284615';
 const GA_MEASUREMENT_ID = '';
 
 let metaInitialized = false;
